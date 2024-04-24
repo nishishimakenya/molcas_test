@@ -1,0 +1,14 @@
+* hydroxy anion test
+&GATEWAY
+  Coord = 2
+  Angstrom
+  H 1.0 0.0 0.0
+  O 0.0 0.0 0.0
+  Basis = cc-pVDZ
+  Group = Full
+  NoCD
+
+&SEWARD
+
+&SCF
+  Charge = -1
