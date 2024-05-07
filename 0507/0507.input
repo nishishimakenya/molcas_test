@@ -1,0 +1,29 @@
+*hydroxy anion
+&GATEWAY
+ Coord = 2
+ Angstrom
+ O 0.0 0.0 0.0
+ H 1.0 0.0 0.0
+ Basis = cc-pVQZ
+ Group = C1
+ NoCD
+
+&SEWARD
+
+&SCF
+ Charge = -1
+
+*hydroxyl radical
+&GATEWAY
+ Coord = 2
+ Angstrom
+ O 0.0 0.0 0.0
+ H 1.0 0.0 0.0
+ Basis = cc-pVQZ
+ Group = C1
+ NoCD
+
+&SEWARD
+
+&SCF
+ Spin = 2

@@ -1,0 +1,60 @@
+<module value="gateway">
+</module>
+<module value="seward">
+</module>
+<module value="scf">
+<method> "rhf"</method>
+<energy appear="Total SCF energy" units="a.u." level="1" type="real"> -78.04001821</energy>
+<kinetic appear="Kinetic energy" units="a.u." level="2" type="real"> 77.88022145</kinetic>
+<virial appear="Virial coefficient" units="a.u." level="2" type="real"> 1.00205183</virial>
+<spin appear="UHF spin" level="1" type="real"> 0.00000000</spin>
+<potnuc appear="Nuclear repulsion energy" units="a.u." level="1" type="real"> 33.35656706</potnuc>
+<energy1el appear="One electron energy" units="a.u." level="1" type="real"> -170.01354745</energy1el>
+<energy2el appear="Two electron energy" units="a.u." level="1" type="real"> 58.61696218</energy2el>
+<nsym appear="Number of irreps" level="1" type="int"> 8</nsym>
+<nbas appear="Number of basis functions" level="1" type="int" nx="8"><v> 11</v><v> 7</v><v> 4</v><v> 2</v><v> 2</v><v> 4</v><v> 7</v><v> 11</v></nbas>
+<norb appear="Number of orbitals" level="1" type="int" nx="8"><v> 11</v><v> 7</v><v> 4</v><v> 2</v><v> 2</v><v> 4</v><v> 7</v><v> 11</v></norb>
+<nocc appear="Number of occupied orbitals" level="1" type="int" nx="8"><v> 3</v><v> 1</v><v> 1</v><v> 0</v><v> 0</v><v> 0</v><v> 1</v><v> 2</v></nocc>
+<FormalCharge appear="Total charge" units="a.u" type="real"> -0.00000000</FormalCharge>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.00000000</v><v> 0.00000000</v><v> 0.00000000</v></dipole>
+</module>
+<module value="gateway">
+</module>
+<module value="seward">
+</module>
+<module value="scf">
+<method> "rhf"</method>
+<energy appear="Total SCF energy" units="a.u." level="1" type="real"> -75.39909065</energy>
+<kinetic appear="Kinetic energy" units="a.u." level="2" type="real"> 75.40898365</kinetic>
+<virial appear="Virial coefficient" units="a.u." level="2" type="real"> 0.99986881</virial>
+<spin appear="UHF spin" level="1" type="real"> 0.00000000</spin>
+<potnuc appear="Nuclear repulsion energy" units="a.u." level="1" type="real"> 4.23341769</potnuc>
+<energy1el appear="One electron energy" units="a.u." level="1" type="real"> -116.51072039</energy1el>
+<energy2el appear="Two electron energy" units="a.u." level="1" type="real"> 36.87821205</energy2el>
+<nsym appear="Number of irreps" level="1" type="int"> 1</nsym>
+<nbas appear="Number of basis functions" level="1" type="int"> 85</nbas>
+<norb appear="Number of orbitals" level="1" type="int"> 85</norb>
+<nocc appear="Number of occupied orbitals" level="1" type="int"> 5</nocc>
+<FormalCharge appear="Total charge" units="a.u" type="real"> -1.00000000</FormalCharge>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.35889666</v><v> 0.00000000</v><v> -0.00000000</v></dipole>
+</module>
+<module value="gateway">
+</module>
+<module value="seward">
+</module>
+<module value="scf">
+<method> "uhf"</method>
+<energy appear="Total SCF energy" units="a.u." level="1" type="real"> -75.42394363</energy>
+<kinetic appear="Kinetic energy" units="a.u." level="2" type="real"> 75.34220577</kinetic>
+<virial appear="Virial coefficient" units="a.u." level="2" type="real"> 1.00108489</virial>
+<spin appear="UHF spin" level="1" type="real"> 0.50356318</spin>
+<potnuc appear="Nuclear repulsion energy" units="a.u." level="1" type="real"> 4.23341769</potnuc>
+<energy1el appear="One electron energy" units="a.u." level="1" type="real"> -112.45979919</energy1el>
+<energy2el appear="Two electron energy" units="a.u." level="1" type="real"> 32.80243787</energy2el>
+<nsym appear="Number of irreps" level="1" type="int"> 1</nsym>
+<nbas appear="Number of basis functions" level="1" type="int"> 85</nbas>
+<norb appear="Number of orbitals" level="1" type="int"> 85</norb>
+<nocc_a appear="Number of occupied alpha orbitals" level="1" type="int"> 5</nocc_a>
+<nocc_b appear="Number of occupied beta orbitals" level="1" type="int"> 4</nocc_b>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.70724287</v><v> 0.00000000</v><v> -0.00000000</v></dipole>
+</module>
