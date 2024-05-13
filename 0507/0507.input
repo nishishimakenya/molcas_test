@@ -4,7 +4,7 @@
  Angstrom
  O 0.0 0.0 0.0
  H 1.0 0.0 0.0
- Basis = cc-pVQZ
+ Basis = aug-cc-pVQZ
  Group = C1
  NoCD
 
@@ -19,7 +19,7 @@
  Angstrom
  O 0.0 0.0 0.0
  H 1.0 0.0 0.0
- Basis = cc-pVQZ
+ Basis = aug-cc-pVQZ
  Group = C1
  NoCD
 
@@ -27,3 +27,5 @@
 
 &SCF
  Spin = 2
+ *UHF
+ *Zspin=1

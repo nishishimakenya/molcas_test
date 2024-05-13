@@ -1,0 +1,14 @@
+*hydroxy anion
+&GATEWAY
+ Coord = 2
+ Angstrom
+ H 0.0 0.0 0.0
+ H 1000000000000.0 0.0 0.0
+ Basis = aug-cc-pVQZ
+ Group = C1
+ NoCD
+
+&SEWARD
+
+&SCF
+ FILEORB = h2_potential.ScfOrb
