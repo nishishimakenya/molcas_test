@@ -1,0 +1,550 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: 24.02
+                   OPENMOLCASO
+                       OPE                tag: 428-g03afa2e9a
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.28                       *
+           *   build c4a6d18ded8cb6cad61d2372a9abd97c      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: DESKTOP-ET1S6F4 (Linux)
+C Compiler ID: GNU
+C flags: -std=gnu99 -fopenmp
+Fortran Compiler ID: GNU
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fopenmp
+Definitions: _WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   ----------------------------------------------------------------------
+  |
+  |           Project: c2h4
+  |    Submitted from: /home/kenya/molcas_test/0528
+  |      Scratch area: /tmp/c2h4
+  |   Save outputs to: /home/kenya/molcas_test/0528
+  |            Molcas: /home/kenya/OpenMolcas/builds/gnu_dev_omp
+  |
+  | Scratch area is NOT empty
+  |
+  |    MOLCAS_DRIVER = /home/kenya/OpenMolcas/builds/gnu_dev_omp/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /home/kenya/OpenMolcas
+  | MOLCAS_STRUCTURE = 0
+  |
+   ----------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&GATEWAY
+  Coord = 6
+  Angstrom
+  C       -0.665079000      0.000000000      0.000000000
+  C        0.665079000      0.000000000      0.000000000
+  H       -1.238029000      0.923341000      0.000000000
+  H       -1.238029000     -0.923341000      0.000000000
+  H        1.238029000      0.923341000      0.000000000
+  H        1.238029000     -0.923341000      0.000000000
+  Basis = cc-pVDZ
+  Group
+  full
+  NoCD
+
+&SEWARD
+
+&SCF
+
+-- ----------------------------------
+
+*** symbolic link created: INPORB -> c2h4.ScfOrb
+--- Start Module: gateway at Tue May 28 14:23:14 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &GATEWAY
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                             pid: 52880
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+      Found SYMMETRY generators: x y z
+
+++    Symmetry information:
+      ---------------------
+
+                    --- Group Generators ---
+                    Reflection in the yz-plane  
+                    Reflection in the xz-plane  
+                    Reflection in the xy-plane  
+
+                    Character Table for D2h
+
+                             E   s(yz) s(xz) C2(z) s(xy) C2(y) C2(x)   i  
+                    ag       1     1     1     1     1     1     1     1  
+                    b3u      1    -1     1    -1     1    -1     1    -1  x
+                    b2u      1     1    -1    -1     1     1    -1    -1  y
+                    b1g      1    -1    -1     1     1    -1    -1     1  xy, Rz
+                    b1u      1     1     1     1    -1    -1    -1    -1  z
+                    b2g      1    -1     1    -1    -1     1    -1     1  xz, Ry
+                    b3g      1     1    -1    -1    -1    -1     1     1  yz, Rx
+                    au       1    -1    -1     1    -1     1     1    -1  I
+--
+
+
+++    Basis set information:
+      ----------------------
+
+
+      Basis set label: C.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   6.000000 au
+      Associated Actual Charge      6.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       9       3        X                  
+         p       4       2        X                  
+         d       1       1                 X         
+
+
+      Basis set label: H.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   1.000000 au
+      Associated Actual Charge      1.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       4       2        X                  
+         p       1       1        X                  
+--
+
+
+++    Molecular structure info:
+      -------------------------
+
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+
+     Center  Label                x              y              z                     x              y              z
+        1      C1              -1.256817       0.000000       0.000000             -0.665079       0.000000       0.000000
+        2      C1               1.256817       0.000000       0.000000              0.665079       0.000000       0.000000
+        3      H2              -2.339536       1.744862       0.000000             -1.238029       0.923341       0.000000
+        4      H2               2.339536       1.744862       0.000000              1.238029       0.923341       0.000000
+        5      H2              -2.339536      -1.744862       0.000000             -1.238029      -0.923341       0.000000
+        6      H2               2.339536      -1.744862       0.000000              1.238029      -0.923341       0.000000
+
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+
+               1 C1            2 C1            3 H2            4 H2            5 H2            6 H2    
+    1 C1       0.000000
+    2 C1       2.513634        0.000000
+    3 H2       2.053490        3.997286        0.000000
+    4 H2       3.997286        2.053490        4.679071        0.000000
+    5 H2       2.053490        3.997286        3.489723        5.837112        0.000000
+    6 H2       3.997286        2.053490        5.837112        3.489723        4.679071        0.000000
+
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+
+               1 C1            2 C1            3 H2            4 H2            5 H2            6 H2    
+    1 C1       0.000000
+    2 C1       1.330158        0.000000
+    3 H2       1.086660        2.115273        0.000000
+    4 H2       2.115273        1.086660        2.476058        0.000000
+    5 H2       1.086660        2.115273        1.846682        3.088867        0.000000
+    6 H2       2.115273        1.086660        3.088867        1.846682        2.476058        0.000000
+
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 C1       1 C1       3 H2       121.82
+                      2 C1       1 C1       5 H2       121.82
+                      3 H2       1 C1       5 H2       116.36
+                      1 C1       2 C1       4 H2       121.82
+                      1 C1       2 C1       6 H2       121.82
+                      4 H2       2 C1       6 H2       116.36
+
+           ***************************************************************
+           *              Valence Dihedral Angles / Degree               *
+           ***************************************************************
+                    Atom centers                       Phi1     Phi2     Theta 
+           3 H2       1 C1       2 C1       4 H2        121.82   121.82    -0.00
+           3 H2       1 C1       2 C1       6 H2        121.82   121.82  -180.00
+           5 H2       1 C1       2 C1       6 H2        121.82   121.82    -0.00
+           4 H2       2 C1       1 C1       5 H2        121.82   121.82  -180.00
+--
+
+
+            Nuclear Potential Energy             33.35656706 au
+
+--- Stop Module: gateway at Tue May 28 14:23:17 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0528
+--- Module gateway spent 2 seconds ---
+
+*** symbolic link created: INPORB -> c2h4.ScfOrb
+--- Start Module: seward at Tue May 28 14:23:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SEWARD
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                             pid: 52907
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Velocity integrals
+                  Orbital angular momentum around ( 0.0000  0.0000  0.0000 )
+                  Velocity quadrupole around ( 0.0000  0.0000  0.0000 )
+                  Two-Electron Repulsion integrals
+
+                   Integrals are discarded if absolute value <: 1.00E-14
+                   Integral cutoff threshold is set to       <: 1.00E-16
+
+                    Unitary symmetry adaptation
+
+
+            Nuclear Potential Energy             33.35656706 au
+
+
+      Basis set specifications :
+      Symmetry species         ag   b3u  b2u  b1g  b1u  b2g  b3g  au 
+      Basis functions           11   11    7    7    4    4    2    2
+
+
+      Input file to MOLDEN was generated!
+
+--- Stop Module: seward at Tue May 28 14:23:23 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: c2h4.GssOrb c2h4.guessorb.molden xmldump
+    saved to directory /home/kenya/molcas_test/0528
+--- Module seward spent 6 seconds ---
+
+*** symbolic link created: INPORB -> c2h4.ScfOrb
+--- Start Module: scf at Tue May 28 14:23:23 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                                &SCF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                             pid: 52965
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+++    Input section:
+      --------------
+
+      Header of the integral files:
+      
+       Integrals generated by Gateway/Seward, Tue May 28 14:23:18 2024
+
+
+      Cartesian coordinates in Angstrom:
+      -----------------------------------------------------
+      No.  Label        X            Y            Z        
+      -----------------------------------------------------
+       1   C1        -0.66507900   0.00000000   0.00000000
+       2   H2        -1.23802900   0.92334100   0.00000000
+       3   C1         0.66507900   0.00000000   0.00000000
+       4   H2         1.23802900   0.92334100   0.00000000
+       5   H2        -1.23802900  -0.92334100   0.00000000
+       6   H2         1.23802900  -0.92334100   0.00000000
+      -----------------------------------------------------
+      Nuclear repulsion energy =   33.35656706
+--
+
+++    Orbital specifications:
+      -----------------------
+
+      Symmetry species               1   2   3   4   5   6   7   8
+                                    ag b3u b2u b1g b1u b2g b3g  au
+      Frozen orbitals                0   0   0   0   0   0   0   0
+      Occupied orbitals              3   2   1   1   1   0   0   0
+      Secondary orbitals             8   9   6   6   3   4   2   2
+      Deleted orbitals               0   0   0   0   0   0   0   0
+      Total number of orbitals      11  11   7   7   4   4   2   2
+      Number of basis functions     11  11   7   7   4   4   2   2
+--
+
+      Molecular charge                           0.000
+
+++    Optimization specifications:
+      ----------------------------
+
+      SCF Algorithm: Conventional
+      Minimized density differences are used
+      Number of density matrices in core                 5
+      Maximum number of NDDO SCF iterations            400
+      Maximum number of HF SCF iterations              400
+      Threshold for SCF energy change             1.00E-09
+      Threshold for density matrix                1.00E-04
+      Threshold for Fock matrix                   1.50E-04
+      Threshold for linear dependence             1.00E-09
+      Threshold at which DIIS is turned on        1.50E-01
+      Maximum depth in the DIIS procedure                5
+      Maximum depth in the BFGS Hessian update          30
+      Threshold at which QNR/C2DIIS is turned on  7.50E-02
+      Threshold for Norm(delta) (QNR/C2DIIS)      1.00E-03
+      All orbitals punched on: SCFORB
+--
+
+      Input vectors read from INPORB
+      Orbital file label: * SCF orbitals
+
+
+++ Convergence information
+                                   SCF        iterations: Energy and convergence statistics
+
+Iter     Tot. SCF        One-elec.       Two-elec.     Energy      Max Dij or  Max Fij      DNorm      TNorm      AccCon     Time
+         Energy          Energy          Energy        Change      Delta Norm                                                in Sec.
+   1   -78.040018212  -170.013547582    58.616962306   0.00E+00    8.37E-09    4.87E-09     6.79E+00   5.61E+01   None         0.
+   2   -78.040018212  -170.013547561    58.616962285  -1.42E-13    3.29E-09    1.28E-09     9.43E-08   5.61E+01   EDIIS        0.
+
+       Convergence after   2 Macro Iterations
+--
+
+ *****************************************************************************************************************************
+ *                                                                                                                           *
+ *                                             SCF/KS-DFT Program, Final results                                             *
+ *                                                                                                                           *
+ *                                                                                                                           *
+ *                                                                                                                           *
+ *                                                       Final Results                                                       *
+ *                                                                                                                           *
+ *****************************************************************************************************************************
+
+::    Total SCF energy                                -78.0400182122
+      One-electron energy                            -170.0135475612
+      Two-electron energy                              58.6169622846
+      Nuclear repulsion energy                         33.3565670644
+      Kinetic energy (interpolated)                    77.8802212295
+      Virial theorem                                    1.0020518301
+      Total spin, S(S+1)                                0.0000000000
+      Total spin, S                                     0.0000000000
+      Max non-diagonal density matrix element           0.0000000033
+      Max non-diagonal Fock matrix element              0.0000000013
+
+
+      All orbitals with orbital energies smaller than  E(LUMO)+0.5 are printed
+
+++    Molecular orbitals:
+      -------------------
+
+      Title: SCF orbitals
+
+      Molecular orbitals for symmetry species 1: ag 
+
+          Orbital            1         2         3         4         5    
+          Energy          -11.2365   -1.0318   -0.5846    0.2036    0.5794
+          Occ. No.          2.0000    2.0000    2.0000    0.0000    0.0000
+
+        1 C1     1s         1.0009   -0.0333   -0.0035    0.0678   -0.1119
+        2 C1     2s         0.0072    0.8485   -0.0785   -0.1496   -0.4860
+        3 C1     *s        -0.0067   -0.2198    0.0621   -1.8900   -0.3227
+        4 C1     2px       -0.0005    0.2505   -0.8550    0.2883   -0.8923
+        5 C1     *px        0.0009   -0.0817    0.1957    0.6203    1.8894
+        6 C1     *d0       -0.0004   -0.0109   -0.0024    0.0222   -0.0020
+        7 C1     *d2+       0.0002    0.0251   -0.0312    0.0043   -0.0832
+        8 H2     1s        -0.0006    0.3789    0.5700    0.0336    0.7988
+        9 H2     *s         0.0024   -0.1750   -0.1577    1.8545   -0.2886
+       10 H2     *px       -0.0001    0.0221   -0.0053    0.0196    0.0678
+       11 H2     *py        0.0006   -0.0292   -0.0267   -0.0199    0.0083
+
+      Molecular orbitals for symmetry species 2: b3u
+
+          Orbital            1         2         3         4    
+          Energy          -11.2349   -0.7889    0.2375    0.4645
+          Occ. No.          2.0000    2.0000    0.0000    0.0000
+
+        1 C1     1s         1.0018   -0.0185    0.0733   -0.0974
+        2 C1     2s         0.0091    0.6707   -0.2336   -0.0425
+        3 C1     *s        -0.0112   -0.1667   -2.0687    5.2218
+        4 C1     2px       -0.0003   -0.3417    0.1713    0.3022
+        5 C1     *px       -0.0014    0.0549    0.3986    4.6555
+        6 C1     *d0       -0.0012   -0.0006    0.0314   -0.0754
+        7 C1     *d2+      -0.0000   -0.0165    0.0176    0.0281
+        8 H2     1s        -0.0013    0.6716    0.0592    0.3811
+        9 H2     *s         0.0020   -0.2654    2.1338    1.2435
+       10 H2     *px       -0.0006    0.0183    0.0107   -0.0082
+       11 H2     *py        0.0009   -0.0415   -0.0364    0.0359
+
+      Molecular orbitals for symmetry species 3: b2u
+
+          Orbital            1         2         3    
+          Energy           -0.6372    0.2323    0.6094
+          Occ. No.          2.0000    0.0000    0.0000
+
+        1 C1     2py        0.6592   -0.4739   -0.1180
+        2 C1     *py       -0.1446   -0.8744    0.6154
+        3 C1     *d2-      -0.0006   -0.0014    0.2092
+        4 H2     1s         0.7149    0.0975   -1.7626
+        5 H2     *s        -0.2346    2.3141    1.3428
+        6 H2     *px        0.0216    0.0146    0.1371
+        7 H2     *py       -0.0221   -0.0234   -0.0288
+
+      Molecular orbitals for symmetry species 4: b1g
+
+          Orbital            1         2    
+          Energy           -0.5009    0.3035
+          Occ. No.          2.0000    0.0000
+
+        1 C1     2py        0.6250   -0.4148
+        2 C1     *py       -0.1233   -2.1354
+        3 C1     *d2-      -0.0583    0.0484
+        4 H2     1s         0.8631   -0.0710
+        5 H2     *s        -0.1720    3.3880
+        6 H2     *px        0.0234    0.0350
+        7 H2     *py       -0.0135   -0.0315
+
+      Molecular orbitals for symmetry species 5: b1u
+
+          Orbital            1    
+          Energy           -0.3749
+          Occ. No.          2.0000
+
+        1 C1     2pz        0.8085
+        2 C1     *pz        0.0347
+        3 C1     *d1+       0.0458
+        4 H2     *pz        0.0263
+
+      Molecular orbitals for symmetry species 6: b2g
+
+          Orbital            1    
+          Energy            0.1687
+          Occ. No.          0.0000
+
+        1 C1     2pz        0.7244
+        2 C1     *pz        0.7285
+        3 C1     *d1+      -0.0356
+        4 H2     *pz        0.0359
+--
+
+
+++    Molecular charges:
+      ------------------
+
+      Mulliken charges per centre and basis function type
+      ---------------------------------------------------
+
+                C1      H2    
+      1s       2.0028  1.2688
+      2s       1.4508  0.0000
+      2px      1.1965  0.0000
+      2pz      0.9366  0.0000
+      2py      1.1883  0.0000
+      *s      -0.3446 -0.3502
+      *px     -0.2059  0.0091
+      *pz      0.0387  0.0052
+      *py     -0.2241  0.0176
+      *d2+     0.0141  0.0000
+      *d1+     0.0142  0.0000
+      *d0      0.0023  0.0000
+      *d1-     0.0000  0.0000
+      *d2-     0.0291  0.0000
+      Total    6.0989  0.9506
+
+      N-E     -0.0989  0.0494
+
+      Total electronic charge=   16.000000
+
+      Total            charge=   -0.000000
+--
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =    0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X=  0.0000E+00               Y=  0.0000E+00               Z=  0.0000E+00           Total=  0.0000E+00
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                  XX= -1.2109E+01              XY=  0.0000E+00              XZ=  0.0000E+00              YY= -1.2353E+01
+                  YZ=  0.0000E+00              ZZ= -1.5577E+01
+      In traceless form (Debye*Ang)
+                  XX=  1.8556E+00              XY=  0.0000E+00              XZ=  0.0000E+00              YY=  1.4904E+00
+                  YZ=  0.0000E+00              ZZ= -3.3460E+00
+--
+
+
+      Input file to MOLDEN was generated!
+
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: RunFile label nBas                                          ###
+ ###    was used       60 times                                              ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+--- Stop Module: scf at Tue May 28 14:23:27 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: c2h4.scf.molden c2h4.ScfOrb xmldump
+    saved to directory /home/kenya/molcas_test/0528
+--- Module scf spent 3 seconds ---
+
+.##################.
+.# Happy landing! #.
+.##################.
+
+    Timing: Wall=12.54 User=10.99 System=2.53
