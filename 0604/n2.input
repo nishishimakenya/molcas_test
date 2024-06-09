@@ -1,0 +1,21 @@
+> export DIST = 0.5
+> foreach L in (1 .. 101)
+
+&GATEWAY
+  Coord = 2
+  Angstrom
+  N 0.0 0.0 0.0
+  N $DIST 0.0 0.0
+  Basis = 6-31G*
+  Group = C1
+  NoCD
+
+&SEWARD
+
+&SCF
+FILEORB = n2.ScfOrb
+
+&MBPT2
+
+> eval DIST = $DIST + 0.1
+> enddo
