@@ -1,0 +1,9 @@
+&GATEWAY
+Coord = ts.Opt.xyz
+  Basis = 6-31G*
+  Group = Full
+  NoCD
+
+&SEWARD
+
+&SCF
