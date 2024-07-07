@@ -1,0 +1,8 @@
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1   -229.38262544  0.00000000 0.000071  0.000030 nrc004  -0.000068  nrc005     -229.38262545 RS-RFO  None      0    
+
