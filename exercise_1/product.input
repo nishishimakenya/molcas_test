@@ -4,13 +4,8 @@ Coord = product.Opt.xyz
   Group = Full
   NoCD
 
-
->> Do WHILE
 &SEWARD
 
 &SCF
 
-&ALASKA
-
-&SLAPAF
->> End Do
+&MCKINLEY

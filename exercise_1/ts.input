@@ -5,12 +5,8 @@ Coord = ts.Opt.xyz
   NoCD
 
 
->> Do WHILE
 &SEWARD
 
 &SCF
 
-&ALASKA
-
-&SLAPAF
->> End Do
+&MCKINLEY
