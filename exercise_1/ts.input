@@ -9,4 +9,8 @@ Coord = ts.Opt.xyz
 
 &SCF
 
-&MCKINLEY
+&RASSCF
+  NACTEL = 12 0 0
+  INACTIVE = 14
+  RAS2 = 12
+  Alter = 

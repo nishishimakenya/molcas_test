@@ -30,7 +30,8 @@ product: -229.226784
 03. CASSCFによる計算(1)
 casscfで活性空間指定して計算 reactant, ts, product
 -229.57067459, -229.51991905, -229.52647146 になればいい
-reactant2.out -229.57067459
+reactant: -229.57067374
+product: -229.52647142
 
 04. CASSCFによる計算(2)
 symmetry 指定して計算　何を言っているのか全く分からない
