@@ -16,6 +16,7 @@ reactant: -229.3826254492
 ts: -229.2706329884
 product: -229.2708998244
 
+ 1 hartree = 627.51 kcal/mol によってエネルギー変換
 
 02. Hartree–Fock法による計算(2)
 &MCKINLEY
