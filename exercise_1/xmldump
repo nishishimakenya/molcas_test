@@ -1,0 +1,47 @@
+<module value="gateway">
+</module>
+<module value="seward">
+</module>
+<module value="alaska">
+<module value="gateway">
+</module>
+<module value="seward">
+</module>
+<module value="scf">
+<method> "rhf"</method>
+<energy appear="Total SCF energy" units="a.u." level="1" type="real"> -229.27089982</energy>
+<kinetic appear="Kinetic energy" units="a.u." level="2" type="real"> 229.11747539</kinetic>
+<virial appear="Virial coefficient" units="a.u." level="2" type="real"> 1.00066963</virial>
+<spin appear="UHF spin" level="1" type="real"> 0.00000000</spin>
+<potnuc appear="Nuclear repulsion energy" units="a.u." level="1" type="real"> 186.86183486</potnuc>
+<energy1el appear="One electron energy" units="a.u." level="1" type="real"> -678.34885267</energy1el>
+<energy2el appear="Two electron energy" units="a.u." level="1" type="real"> 262.21611799</energy2el>
+<nsym appear="Number of irreps" level="1" type="int"> 8</nsym>
+<nbas appear="Number of basis functions" level="1" type="int" nx="8"><v> 21</v><v> 16</v><v> 21</v><v> 16</v><v> 7</v><v> 5</v><v> 7</v><v> 5</v></nbas>
+<norb appear="Number of orbitals" level="1" type="int" nx="8"><v> 21</v><v> 16</v><v> 21</v><v> 16</v><v> 7</v><v> 5</v><v> 7</v><v> 5</v></norb>
+<nocc appear="Number of occupied orbitals" level="1" type="int" nx="8"><v> 5</v><v> 4</v><v> 5</v><v> 3</v><v> 1</v><v> 1</v><v> 1</v><v> 0</v></nocc>
+<FormalCharge appear="Total charge" units="a.u" type="real"> -0.00000000</FormalCharge>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.00000000</v><v> 0.00000000</v><v> 0.00000000</v></dipole>
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="last_energy">
+<module value="scf">
+<method> "rhf"</method>
+<energy appear="Total SCF energy" units="a.u." level="1" type="real"> -229.27089982</energy>
+<kinetic appear="Kinetic energy" units="a.u." level="2" type="real"> 229.11747179</kinetic>
+<virial appear="Virial coefficient" units="a.u." level="2" type="real"> 1.00066965</virial>
+<spin appear="UHF spin" level="1" type="real"> 0.00000000</spin>
+<potnuc appear="Nuclear repulsion energy" units="a.u." level="1" type="real"> 186.86183239</potnuc>
+<energy1el appear="One electron energy" units="a.u." level="1" type="real"> -678.34884753</energy1el>
+<energy2el appear="Two electron energy" units="a.u." level="1" type="real"> 262.21611531</energy2el>
+<nsym appear="Number of irreps" level="1" type="int"> 8</nsym>
+<nbas appear="Number of basis functions" level="1" type="int" nx="8"><v> 21</v><v> 16</v><v> 21</v><v> 16</v><v> 7</v><v> 5</v><v> 7</v><v> 5</v></nbas>
+<norb appear="Number of orbitals" level="1" type="int" nx="8"><v> 21</v><v> 16</v><v> 21</v><v> 16</v><v> 7</v><v> 5</v><v> 7</v><v> 5</v></norb>
+<nocc appear="Number of occupied orbitals" level="1" type="int" nx="8"><v> 5</v><v> 4</v><v> 5</v><v> 3</v><v> 1</v><v> 1</v><v> 1</v><v> 0</v></nocc>
+<FormalCharge appear="Total charge" units="a.u" type="real"> -0.00000000</FormalCharge>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.00000000</v><v> 0.00000000</v><v> 0.00000000</v></dipole>
+</module>
+</module>
