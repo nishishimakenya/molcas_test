@@ -1,0 +1,47 @@
+01. Hartree–Fock法による計算(1)
+Hartree–Fock法（(R)HF/6-31G(d)）で構造最適化
+>>> Do While
+
+&SEWARD
+
+&SCF
+
+&SLAPAF
+
+>>> End Do
+
+によって reactant, ts, product の構造最適化を行う
+-229.38262545, -229.27063299, -229.27089982 になればいい
+reactant:
+ts: 
+product: -229.2708998244
+
+
+02. Hartree–Fock法による計算(2)
+&MCKINLEY
+
+によってギブスエネルギーを得る
+-229.334576, -229.227300, -229.226784 になればいい
+
+
+03. CASSCFによる計算(1)
+casscfで活性空間指定して計算 reactant, ts, product
+-229.57067459, -229.51991905, -229.52647146 になればいい
+reactant2.out -229.57067459
+
+04. CASSCFによる計算(2)
+symmetry 指定して計算　何を言っているのか全く分からない
+
+05. CASSCFによる計算(3)
+reactant: -229.57428994, product : -229.53800875 構造最適化
+product2.out -229.53800875 になった 
+
+06. CASSCFによる計算(4)
+ts energy -229.50902959
+ts gibbs energy -229.463788
+
+07. CASSCFによる計算(5)
+
+08. CASSCFによる計算(6)
+
+09. CASPT2による計算

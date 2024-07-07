@@ -1,0 +1,16 @@
+&GATEWAY
+Coord = ts.Opt.xyz
+  Basis = 6-31G*
+  Group = Full
+  NoCD
+
+
+>> Do WHILE
+&SEWARD
+
+&SCF
+
+&ALASKA
+
+&SLAPAF
+>> End Do
