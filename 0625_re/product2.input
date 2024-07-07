@@ -4,9 +4,9 @@ Coord = product.Opt.xyz
   Group = Full
   NoCD
 
-&SEWARD
 
-&SCF
+>> Do WHILE
+&SEWARD
 
 &RASSCF
   Inactive = 4 3 4 3 0 0 0 0
@@ -16,3 +16,9 @@ Coord = product.Opt.xyz
   3 6 7
   4 4 5
   LUMORB
+
+&MCKINLEY
+&ALASKA
+
+&SLAPAF
+>> End Do

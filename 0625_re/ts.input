@@ -1,9 +1,28 @@
 &GATEWAY
-Coord = ts.Opt.xyz
+  Coord = ts.Opt.xyz
   Basis = 6-31G*
-  Group = Full
+  Group = C1
   NoCD
+  Constraints
+    a = bond c1 c2
+  Values
+    a = 1.9 angstrom
+  End of Constraints
 
+
+>> copy $CurrDir/ts.RasOrb INPORB
+
+>> Do while
 &SEWARD
 
-&SCF
+
+&RASSCF
+  NACTEL = 12 0 0
+  INACTIVE = 14
+  RAS2 = 12
+
+&ALASKA
+
+&SLAPAF
+>> End Do
+&MCKINLEY

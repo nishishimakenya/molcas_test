@@ -1,0 +1,17 @@
+&GATEWAY
+Coord = reactant.Opt.xyz
+  Basis = 6-31G*
+  Group = Full
+  NoCD
+
+&SEWARD
+
+&SCF
+
+&RASSCF
+  Inactive = 7 7 0 0
+  RAS2   = 3 3 3 3
+  nActEl = 12 0 0 
+  alter = 1
+  2 10 15
+  LUMORB
