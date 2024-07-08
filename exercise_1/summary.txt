@@ -32,9 +32,22 @@ casscfで活性空間指定して計算 reactant, ts, product
 -229.57067459, -229.51991905, -229.52647146 になればいい
 reactant: -229.57067374
 product: -229.52647142
+ts: -229.51991952
 
 04. CASSCFによる計算(2)
 symmetry 指定して計算　何を言っているのか全く分からない
+product
+symmetry 1: -229.52647142 
+symmetry 2: -229.32464124
+symmetry 3: -229.32887543
+symmetry 4: -229.28383670
+symmetry 5: -229.33513755
+symmetry 6: -229.38287510
+symmetry 7: -229.37121003
+symmetry 8: -229.33671464
+
+1 << 4 < 6 < 7 ...
+
 
 05. CASSCFによる計算(3)
 reactant: -229.57428994, product : -229.53800875 構造最適化
