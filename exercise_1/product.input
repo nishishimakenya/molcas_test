@@ -4,14 +4,20 @@ Coord = product.Opt.xyz
   Group = Full
   NoCD
 
+>> copy $CurrDir/product.RasOrb INPORB
+
+>> Do while
 &SEWARD
 
-&SCF
 
 &RASSCF
   Inactive = 4 3 4 3 0 0 0 0
   RAS2   = 2 1 2 1 2 1 2 1
   nActEl = 12 0 0 
-  alter = 2
-  3 6 7
-  4 4 5
+  LUMORB
+
+&ALASKA
+
+&SLAPAF
+>> End Do
+&MCKINLEY

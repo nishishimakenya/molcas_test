@@ -4,14 +4,20 @@ Coord = reactant.Opt.xyz
   Group = Full
   NoCD
 
+>> copy $CurrDir/reactant.RasOrb INPORB
 
+>> Do while
 &SEWARD
 
-&SCF
 
 &RASSCF
   Inactive = 7 7 0 0
   RAS2   = 3 3 3 3
   nActEl = 12 0 0 
-  alter = 1
-  2 10 11
+  LUMORB
+
+&ALASKA
+
+&SLAPAF
+>> End Do
+&MCKINLEY
