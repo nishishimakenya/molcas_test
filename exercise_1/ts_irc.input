@@ -1,0 +1,31 @@
+&GATEWAY
+  Coord = $CurrDir/ts_sp.Opt.xyz
+  Basis = 6-31G*
+  Group = FULL
+  NoCD
+
+> COPY $CurrDir/ts_sp.RasOrb INPORB
+> export MOLCAS_MAXITER=500
+
+> do while
+
+&SEWARD
+
+&RASSCF
+  LUMORB
+  NACTEL = 12 0 0 
+  INACTIVE = 7 7 0 0 
+  RAS2 = 3 3 3 3 
+
+&SLAPAF
+  IRC 
+  Reaction vector
+  6.614710465262E-01  5.210258743735E-04 0.0d+00
+ -3.477663196298E-02  2.713665646421E-02 0.0d+00
+  9.082644285421E-02  2.204737697925E-01 0.0d+00
+ -3.565183807632E-02 -4.456272182659E-02 0.0d+00
+  5.315102850480E-03 -1.914954160343E-02 0.0d+00
+  Iterations = 200 
+  nirc = 100 
+
+> end do
