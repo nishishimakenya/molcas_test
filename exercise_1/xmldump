@@ -590,3 +590,103 @@
 <FormalCharge appear="Total charge" units="a.u" type="real"> -0.00000000</FormalCharge>
 <dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> -0.00000000</v><v> 0.03049895</v><v> 0.00000000</v></dipole>
 </module>
+<module value="gateway">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+<FormalCharge appear="Total charge" units="a.u" type="real"> -0.00000000</FormalCharge>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.00000000</v><v> 0.03049399</v><v> 0.00000000</v></dipole>
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="seward">
+</module>
+<module value="rasscf">
+</module>
+<module value="alaska">
+</module>
+<module value="slapaf">
+</module>
+<module value="last_energy">
+<FormalCharge appear="Total charge" units="a.u" type="real"> -0.00000000</FormalCharge>
+<dipole appear="Dipole moment" units="Debye" level="1" type="real" nx="3"><v> 0.00000012</v><v> 0.09670335</v><v> 0.00000135</v></dipole>
+</module>
+<module value="mckinley">
+</module>
+<module value="mclr">
+</module>

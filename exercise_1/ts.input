@@ -3,18 +3,24 @@ Coord = ts.Opt.xyz
   Basis = 6-31G*
   Group = C1
   NoCD
+Constraints
+    a = bond c1 c2
+  Values
+    a = 1.9 angstrom
+  End of Constraints
+>> copy $CurrDir/ts.RasOrb INPORB
 
-
+>> Do while
 &SEWARD
 
-&SCF
-
 &RASSCF
+　LUMORB
   Inactive = 14
   RAS2   = 12
   nActEl = 12 0 0 
-  alter = 4
-  1 14 15
-  1 24 28
-  1 25 29
-  1 26 31
+&ALASKA
+
+&SLAPAF
+>> End Do
+
+&MCKINLEY
