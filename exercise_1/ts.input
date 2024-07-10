@@ -1,23 +1,20 @@
 &GATEWAY
 Coord = ts.Opt.xyz
   Basis = 6-31G*
-  Group = Full
+  Group = C1
   NoCD
 
->> copy $CurrDir/ts.RasOrb INPORB
 
->> Do while
 &SEWARD
 
+&SCF
 
 &RASSCF
-  Inactive = 7 7 0 0
-  RAS2   = 3 3 3 3
+  Inactive = 14
+  RAS2   = 12
   nActEl = 12 0 0 
-  LUMORB
-
-&ALASKA
-
-&SLAPAF
->> End Do
-&MCKINLEY
+  alter = 4
+  1 14 15
+  1 24 28
+  1 25 29
+  1 26 31
