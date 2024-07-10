@@ -1,0 +1,26 @@
+&GATEWAY
+  Coord = ts_sp.Opt.xyz
+  Basis = 6-31G*
+  Group = Full
+  NoCD
+
+>> copy $CurrDir/ts_sp.RasOrb INPORB
+
+>> Do while
+&SEWARD
+
+&RASSCF
+  LUMORB
+  NACTEL = 12 0 0 
+  INACTIVE = 7 7 0 0 
+  RAS2 = 3 3 3 3 
+
+> if (iter = 1)
+&MCKINLEY
+> end if
+
+&SLAPAF
+  TS  
+>> End Do
+
+&MCKINLEY
