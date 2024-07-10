@@ -1,0 +1,16 @@
+&GATEWAY
+  Coord= 08_hexatriene.Opt.xyz
+  Basis = 6-31G*
+  Group = C1
+  NoCD
+
+&SEWARD
+
+&SCF
+
+&RASSCF
+  Inactive = 8
+  RAS1   = 2
+  RAS2   = 2
+  RAS3   = 2
+  nActEl = 6 1 1
