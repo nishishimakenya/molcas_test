@@ -65,21 +65,21 @@ symmetry 指定して計算　何を言っているのか全く分からない
 
 productのsymmetryを操作
 
-symmetry 1: -229.52647142 
+symmetry 1: -229.52647142,ag h,l
 
-symmetry 2: -229.32464124
+symmetry 2: -229.32464124,b3u h
 
-symmetry 3: -229.32887543
+symmetry 3: -229.32887543,b2u h,l
 
-symmetry 4: -229.28383670
+symmetry 4: -229.28383670,b1g l
 
-symmetry 5: -229.33513755
+symmetry 5: -229.33513755,b1u h,l
 
-symmetry 6: -229.38287510
+symmetry 6: -229.38287510,b2g h
 
-symmetry 7: -229.37121003
+symmetry 7: -229.37121003,b3g h,l
 
-symmetry 8: -229.33671464
+symmetry 8: -229.33671464,au l
 
 エネルギーの大小関係は以下のようになった
 
