@@ -76,7 +76,8 @@ symmetry 1: -229.52647142,ag h,l
 symmetry 2: -229.32464124,b3u h
 
 symmetry 3: -229.32887543,b2u h,l
-これの3重項が二番目に安定
+
+これの3重項が二番目に安定 => n軌道に1つずつ不対電子が占有されている
 
 symmetry 4: -229.28383670,b1g l
 
@@ -92,22 +93,37 @@ symmetry 8: -229.33671464,au l
 
 1 << 6 < 7 ...
 
-::    RASSCF root number  1 Total energy:   -229.53800875
-::    RASSCF root number  1 Total energy:   -229.37838269
-::    RASSCF root number  1 Total energy:   -229.34671906
-::    RASSCF root number  1 Total energy:   -229.34991101
-::    RASSCF root number  1 Total energy:   -229.33788971
-::    RASSCF root number  1 Total energy:   -229.52946667
-::    RASSCF root number  1 Total energy:   -229.30765874
-::    RASSCF root number  1 Total energy:   -229.35570907
-::    RASSCF root number  1 Total energy:   -229.37391980
-::    RASSCF root number  1 Total energy:   -229.40095323
-::    RASSCF root number  1 Total energy:   -229.39123796
-::    RASSCF root number  1 Total energy:   -229.38689021
-::    RASSCF root number  1 Total energy:   -229.39847747
-::    RASSCF root number  1 Total energy:   -229.42727670
-::    RASSCF root number  1 Total energy:   -229.36367214
-::    RASSCF root number  1 Total energy:   -229.36015536
+symmetry 1 spin 1  -229.53800875
+
+symmetry 1 spin 3  -229.37838269
+
+symmetry 2 spin 1  -229.34671906
+
+symmetry 2 spin 3  -229.34991101
+
+symmetry 3 spin 1  -229.33788971
+
+symmetry 3 spin 3  -229.52946667
+
+symmetry 4 spin 1  -229.30765874
+
+symmetry 4 spin 3  -229.35570907
+
+symmetry 5 spin 1  -229.37391980
+
+symmetry 5 spin 3  -229.40095323
+
+symmetry 6 spin 1  -229.39123796
+
+symmetry 6 spin 3  -229.38689021
+
+symmetry 7 spin 1  -229.39847747
+
+symmetry 7 spin 3  -229.42727670
+
+symmetry 8 spin 1  -229.36367214
+
+symmetry 8 spin 3  -229.36015536
 
 
 ## 05. CASSCFによる計算(3)
