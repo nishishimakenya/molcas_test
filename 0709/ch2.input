@@ -1,0 +1,16 @@
+&GATEWAY
+coord = 3
+	Energy:       0.1603398
+C         -0.54808        1.44275       -0.00000
+H         -0.09301        0.50277        0.00000
+H          0.09066        2.26898       -0.00000
+
+  Basis = cc-pVDZ
+  Group 
+  full
+  NoCD
+
+
+&SEWARD
+
+&SCF

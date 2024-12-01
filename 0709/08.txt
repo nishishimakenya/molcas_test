@@ -37,3 +37,56 @@ casと同じ結果になるはず
 RAS(6,6,6;3,0,3)
 casと同じ結果になるはず
 -231.91133043
+
+
+caspt2
+CASPT2 Root  1     Total energy:   -232.63337376
+
+raspt2
+CASPT2 Root  1     Total energy:   -232.63336672
+
+rasのほうがエネルギー高い
+
+
+RASSCFがsize-extensiveでないことを示す方法を考え、さらに数値的にsize-extensiveでないことを示してください。
+ch4が1つのエネルギー
+Total SCF energy                                -40.1977978977
+*2 = -80.3955957954
+ch4が2つのエネルギーscf
+Total SCF energy                                -80.3955957954
+
+
+&RASSCF
+  INACTIVE = 8
+  NACTEL = 4 0 0
+  RAS1   = 0
+  RAS2   = 4
+  RAS3   = 0
+
+RASSCF root number  1 Total energy:    -80.42730154  => ダメ
+
+&RASSCF
+  INACTIVE = 9
+  NACTEL = 2 0 0
+  RAS1   = 0
+  RAS2   = 2
+  RAS3   = 0
+
+RASSCF root number  1 Total energy:    -80.41144867
+
+
+
+c2h4
+ras -78.06310349
+
+ras size-extensive
+-77.41983579
+
+triplet ras 
+-77.20190121
+
+単体*2
+-38.8724956990*2 = -77.744991398
+
+scf
+ -77.6240592728

@@ -1,0 +1,780 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: 24.02
+                   OPENMOLCASO
+                       OPE                tag: 428-g03afa2e9a
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.28                       *
+           *   build c4a6d18ded8cb6cad61d2372a9abd97c      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: DESKTOP-ET1S6F4 (Linux)
+C Compiler ID: GNU
+C flags: -std=gnu99 -fopenmp
+Fortran Compiler ID: GNU
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fopenmp
+Definitions: _WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   ----------------------------------------------------------------------
+  |
+  |           Project: extensive
+  |    Submitted from: /home/kenya/molcas_test/0709
+  |      Scratch area: /tmp/extensive
+  |   Save outputs to: /home/kenya/molcas_test/0709
+  |            Molcas: /home/kenya/OpenMolcas/builds/gnu_dev_omp
+  |
+  | Scratch area is NOT empty
+  |
+  |    MOLCAS_DRIVER = /home/kenya/OpenMolcas/builds/gnu_dev_omp/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /home/kenya/OpenMolcas
+  | MOLCAS_STRUCTURE = 0
+  |
+   ----------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&GATEWAY
+  Coord = 10
+  Angstrom
+C         -1.06549        1.12244        0.00000
+H          0.04391        1.12244        0.00000
+H         -1.43528        1.93282       -0.66129
+H         -1.43529        1.28994        1.03245
+H         -1.43529        0.14456       -0.37116
+
+C         -1.06549        101.12244        0.00000
+H          0.04391        101.12244        0.00000
+H         -1.43528        101.93282       -0.66129
+H         -1.43529        101.28994        1.03245
+H         -1.43529        100.14456       -0.37116
+
+  Basis = cc-pVDZ
+  Group
+  full
+  NoCD
+
+&SEWARD
+
+&RASSCF
+  INACTIVE = 9
+  NACTEL = 2 0 0
+  RAS1   = 0
+  RAS2   = 2
+  RAS3   = 0
+
+-- ----------------------------------
+
+--- Start Module: gateway at Tue Jul 16 12:15:37 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &GATEWAY
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 176743
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+++    Symmetry information:
+      ---------------------
+
+                    Character Table for C1 
+
+                             E  
+                    a        1  x, y, xy, Rz, z, xz, Ry, yz, Rx, I
+--
+
+
+++    Basis set information:
+      ----------------------
+
+
+      Basis set label: C.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   6.000000 au
+      Associated Actual Charge      6.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       9       3        X                  
+         p       4       2        X                  
+         d       1       1                 X         
+
+
+      Basis set label: H.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   1.000000 au
+      Associated Actual Charge      1.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       4       2        X                  
+         p       1       1        X                  
+
+
+      Basis set label: C.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   6.000000 au
+      Associated Actual Charge      6.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       9       3        X                  
+         p       4       2        X                  
+         d       1       1                 X         
+
+
+      Basis set label: H.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   1.000000 au
+      Associated Actual Charge      1.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       4       2        X                  
+         p       1       1        X                  
+--
+
+
+++    Molecular structure info:
+      -------------------------
+
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+
+     Center  Label                x              y              z                     x              y              z
+        1      C1              -2.013484       2.121104       0.000000             -1.065490       1.122440       0.000000
+        2      H2               0.082978       2.121104       0.000000              0.043910       1.122440       0.000000
+        3      H3              -2.712286       3.652500      -1.249657             -1.435280       1.932820      -0.661290
+        4      H4              -2.712305       2.437633       1.951048             -1.435290       1.289940       1.032450
+        5      H5              -2.712305       0.273179      -0.701391             -1.435290       0.144560      -0.371160
+        6      C6              -2.013484     191.093717       0.000000             -1.065490     101.122440       0.000000
+        7      H7               0.082978     191.093717       0.000000              0.043910     101.122440       0.000000
+        8      H8              -2.712286     192.625113      -1.249657             -1.435280     101.932820      -0.661290
+        9      H9              -2.712305     191.410246       1.951048             -1.435290     101.289940       1.032450
+       10      H10             -2.712305     189.245791      -0.701391             -1.435290     100.144560      -0.371160
+
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+
+               1 C1            2 H2            3 H3            4 H4            5 H5            6 C6    
+    1 C1       0.000000
+    2 H2       2.096462        0.000000
+    3 H3       2.096459        3.423495        0.000000
+    4 H4       2.096456        3.423505        3.423509        0.000000
+    5 H5       2.096456        3.423505        3.423509        3.423491        0.000000
+    6 C6     188.972612      188.984241      187.446684      188.667466      190.823106        0.000000
+    7 H7     188.984241      188.972612      187.466223      188.686878      190.842299        2.096462
+    8 H8     190.509389      190.528613      188.972612      190.214410      192.352715        2.096459
+    9 H9     189.300486      189.319833      187.785025      188.972612      191.155470        2.096456
+   10 H10    187.127306      187.146878      185.594101      186.826988      188.972612        2.096456
+
+               7 H7            8 H8            9 H9           10 H10   
+    7 H7       0.000000
+    8 H8       3.423495        0.000000
+    9 H9       3.423505        3.423509        0.000000
+   10 H10      3.423505        3.423509        3.423491        0.000000
+
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+
+               1 C1            2 H2            3 H3            4 H4            5 H5            6 C6    
+    1 C1       0.000000
+    2 H2       1.109400        0.000000
+    3 H3       1.109398        1.811636        0.000000
+    4 H4       1.109397        1.811641        1.811643        0.000000
+    5 H5       1.109397        1.811641        1.811643        1.811634        0.000000
+    6 C6     100.000000      100.006154       99.192514       99.838523      100.979239        0.000000
+    7 H7     100.006154      100.000000       99.202853       99.848796      100.989396        1.109400
+    8 H8     100.813227      100.823400      100.000000      100.657131      101.788673        1.109398
+    9 H9     100.173503      100.183741       99.371556      100.000000      101.155119        1.109397
+   10 H10     99.023506       99.033863       98.212169       98.864584      100.000000        1.109397
+
+               7 H7            8 H8            9 H9           10 H10   
+    7 H7       0.000000
+    8 H8       1.811636        0.000000
+    9 H9       1.811641        1.811643        0.000000
+   10 H10      1.811641        1.811643        1.811634        0.000000
+
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 H2       1 C1       3 H3       109.47
+                      2 H2       1 C1       4 H4       109.47
+                      2 H2       1 C1       5 H5       109.47
+                      3 H3       1 C1       4 H4       109.47
+                      3 H3       1 C1       5 H5       109.47
+                      4 H4       1 C1       5 H5       109.47
+                      7 H7       6 C6       8 H8       109.47
+                      7 H7       6 C6       9 H9       109.47
+                      7 H7       6 C6      10 H10      109.47
+                      8 H8       6 C6       9 H9       109.47
+                      8 H8       6 C6      10 H10      109.47
+                      9 H9       6 C6      10 H10      109.47
+--
+
+
+            Nuclear Potential Energy             26.93011618 au
+
+--- Stop Module: gateway at Tue Jul 16 12:15:38 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0709
+
+--- Start Module: seward at Tue Jul 16 12:15:38 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SEWARD
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 176747
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Velocity integrals
+                  Orbital angular momentum around (-2.0135 96.6074 -0.0000 )
+                  Velocity quadrupole around (-2.0135 96.6074 -0.0000 )
+                  Two-Electron Repulsion integrals
+
+                   Integrals are discarded if absolute value <: 1.00E-14
+                   Integral cutoff threshold is set to       <: 1.00E-16
+
+            Nuclear Potential Energy             26.93011618 au
+
+
+      Basis set specifications :
+      Symmetry species         a  
+      Basis functions           68
+
+
+      Input file to MOLDEN was generated!
+
+--- Stop Module: seward at Tue Jul 16 12:15:38 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: extensive.GssOrb extensive.guessorb.molden xmldump
+    saved to directory /home/kenya/molcas_test/0709
+
+--- Start Module: rasscf at Tue Jul 16 12:15:38 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &RASSCF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 176766
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: Had to guess the spin.                                      ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+  Warning: no input and no reliable source
+  for the spin multiplicity.
+  Guess ISPIN=                    1
+
+      Header of the ONEINT file:
+      --------------------------
+      
+      Integrals generated by Gateway/Seward, Tue Jul 16 12:15:38 2024
+
+
+      OrdInt status: non-squared
+
+
+      Cartesian coordinates in Angstrom:
+      -----------------------------------------------------
+      No.  Label        X            Y            Z        
+      -----------------------------------------------------
+       1   C1        -1.06549000   1.12244000   0.00000000
+       2   H2         0.04391000   1.12244000   0.00000000
+       3   H3        -1.43528000   1.93282000  -0.66129000
+       4   H4        -1.43529000   1.28994000   1.03245000
+       5   H5        -1.43529000   0.14456000  -0.37116000
+       6   C6        -1.06549000 101.12244000   0.00000000
+       7   H7         0.04391000 101.12244000   0.00000000
+       8   H8        -1.43528000 101.93282000  -0.66129000
+       9   H9        -1.43529000 101.28994000   1.03245000
+      10   H10       -1.43529000 100.14456000  -0.37116000
+      -----------------------------------------------------
+      Nuclear repulsion energy =   26.93011618
+
+++    Wave function specifications:
+      -----------------------------
+
+      Number of closed shell electrons          18
+      Number of electrons in active shells       2
+      Max number of holes in RAS1 space          0
+      Max nr of electrons in RAS3 space          0
+      Number of inactive orbitals                9
+      Number of active orbitals                  2
+      Number of secondary orbitals              57
+      Spin quantum number                      0.0
+      State symmetry                             1
+--
+
+++    Orbital specifications:
+      -----------------------
+
+      Symmetry species                           1
+                                                 a
+      Frozen orbitals                            0
+      Inactive orbitals                          9
+      Active orbitals                            2
+      RAS1 orbitals                              0
+      RAS2 orbitals                              2
+      RAS3 orbitals                              0
+      Secondary orbitals                        57
+      Deleted orbitals                           0
+      Number of basis functions                 68
+--
+
+++    CI expansion specifications:
+      ----------------------------
+
+      Number of CSFs                             3
+      Number of determinants                     3
+      Number of root(s) required                 1
+      Root chosen for geometry opt.              1
+      CI root used                               1
+         
+      highest root included in the CI            1
+      max. size of the explicit Hamiltonian      3
+--
+
+++    Optimization specifications:
+      ----------------------------
+
+      RASSCF algorithm: Conventional
+      Maximum number of macro iterations       200
+      Maximum number of SX iterations          100
+      Threshold for RASSCF energy            1.000E-08
+      Threshold for max MO rotation          1.000E-01
+      Threshold for max BLB element          1.000E-04
+      Level shift parameter                  5.000E-01
+      Make Quasi-Newton update
+--
+
+      Orbitals from runfile: guessorb orbitals
+      The MO-coefficients are taken from guessorb on runfile
+
+      Total molecular charge    0.00
+
+      ************************************************************************************************************************
+      *                                                                                                                      *
+      *                                            Wave function control section                                             *
+      *                                                                                                                      *
+      ************************************************************************************************************************
+
+
+                                         RASSCF iterations: Energy and convergence statistics
+                                         ----------------------------------------------------
+
+      Iter CI   SX   CI       RASSCF       Energy    max ROT     max BLB   max BLB  Level Ln srch  Step   QN   Walltime
+          iter iter root      energy       change     param      element    value   shift minimum  type update hh:mm:ss
+ Nr of preliminary CI iterations:   1
+        1   1   58    1   -80.20346767    0.00E+00  -9.94E-02    3  18 1  2.67E-01*  0.00   0.00    SX    NO    0:00:00
+        2   1   14    1   -80.39017507   -1.87E-01*  7.99E-02    7  14 1  6.73E-02*  0.00   0.00    SX    NO    0:00:00
+        3   1    9    1   -80.40381101   -1.36E-02*  6.90E-02    3  18 1  3.14E-02*  0.00   0.00    SX    NO    0:00:00
+        4   1   10    1   -80.40640303   -2.59E-03* -8.81E-02    6  15 1  9.62E-03*  0.00   0.00    SX    NO    0:00:00
+        5   1    9    1   -80.40806576   -1.66E-03*  2.22E-01*   3  18 1  4.07E-03*  0.00   2.50    QN   YES    0:00:00
+        6   1   10    1   -80.41062288   -2.56E-03* -4.43E-02    7  14 1 -1.37E-02*  0.00   1.05    QN   YES    0:00:00
+        7   1    9    1   -80.41110579   -4.83E-04*  2.51E-02    6  15 1 -1.00E-02*  0.00   1.96    QN   YES    0:00:00
+        8   1    8    1   -80.41142945   -3.24E-04*  1.21E-02    3  18 1 -1.20E-03*  0.00   1.05    QN   YES    0:00:00
+        9   1    8    1   -80.41144406   -1.46E-05* -5.04E-03   10  27 1 -3.15E-04*  0.00   1.21    QN   YES    0:00:00
+       10   1    7    1   -80.41144730   -3.23E-06*  3.70E-03    7  14 1  1.51E-04*  0.00   1.37    QN   YES    0:00:00
+       11   1    7    1   -80.41144833   -1.03E-06*  1.84E-03    6  15 1  1.31E-04*  0.00   1.50    LS   YES    0:00:00
+       12   1    7    1   -80.41144846   -1.29E-07*  3.35E-04    4  17 1  1.85E-04*  0.00   1.01    QN   YES    0:00:00
+       13   1    6    1   -80.41144863   -1.75E-07*  2.00E-04    4  17 1  6.53E-05   0.00   1.60    LS   YES    0:00:00
+       14   1    6    1   -80.41144866   -2.79E-08* -9.65E-05    2  11 1 -2.10E-05   0.00   0.99    QN   YES    0:00:00
+       15   1    5    1   -80.41144867   -4.04E-09  -1.49E-04    4  11 1  6.05E-06   0.00   1.86    QN   YES    0:00:00
+      Convergence after 15 iterations
+       16   1    5    1   -80.41144867   -1.92E-09  -1.49E-04   10  53 1  5.03E-06   0.00   1.86    QN   YES    0:00:00
+
+      ************************************************************************************************************************
+                                                      Wave function printout:
+                       occupation of active orbitals, and spin coupling of open shells (u,d: Spin up or down)
+      ************************************************************************************************************************
+
+      Note: transformation to natural orbitals
+      has been made, which may change the order of the CSFs.
+
+      printout of CI-coefficients larger than  0.05 for root  1
+      energy=     -80.411449
+      conf/sym  11     Coeff  Weight
+             1  20   0.99538 0.99077
+             3  02  -0.09605 0.00923
+
+      Natural orbitals and occupation numbers for root  1
+      sym 1:   1.981548   0.018452
+
+      ************************************************************************************************************************
+      *                                                                                                                      *
+      *                                                    Final results                                                     *
+      *                                                                                                                      *
+      ************************************************************************************************************************
+
+
+++    Wave function specifications:
+      -----------------------------
+
+      Number of closed shell electrons          18
+      Number of electrons in active shells       2
+      Max number of holes in RAS1 space          0
+      Max nr of electrons in RAS3 space          0
+      Number of inactive orbitals                9
+      Number of active orbitals                  2
+      Number of secondary orbitals              57
+      Spin quantum number                      0.0
+      State symmetry                             1
+--
+
+++    Orbital specifications:
+      -----------------------
+
+      Symmetry species                           1
+                                                 a
+      Frozen orbitals                            0
+      Inactive orbitals                          9
+      Active orbitals                            2
+      RAS1 orbitals                              0
+      RAS2 orbitals                              2
+      RAS3 orbitals                              0
+      Secondary orbitals                        57
+      Deleted orbitals                           0
+      Number of basis functions                 68
+--
+
+++    CI expansion specifications:
+      ----------------------------
+
+      Number of CSFs                             3
+      Number of determinants                     3
+      Number of root(s) required                 1
+      CI root used                               1
+      highest root included in the CI            1
+      Root passed to geometry opt.               1
+--
+
+++    Final optimization conditions:
+      ------------------------------
+
+      Average CI energy                             -80.41144867
+      RASSCF energy for state  1                    -80.41144867
+      Super-CI energy                                -0.00000000
+      RASSCF energy change                           -0.00000000
+      Max change in MO coefficients              -2.409E-04
+      Max non-diagonal density matrix element    -1.488E-04
+      Maximum BLB matrix element                  5.034E-06
+      (orbital pair  10,  53 in symmetry   1)
+      Norm of electronic gradient            1.452E-05
+--
+
+
+      Final state energy(ies):
+      ------------------------
+
+::    RASSCF root number  1 Total energy:    -80.41144867
+
+++    Molecular orbitals:
+      -------------------
+
+      Pseudonatural active orbitals and approximate occupation numbers
+
+
+
+
+      Molecular orbitals for symmetry species 1: a  
+
+
+      Orbital                 1         2         3         4         5         6         7         8         9        10
+      Energy           -11.2251  -11.2209   -0.9341   -0.8676   -0.5377   -0.5377   -0.5377   -0.5371   -0.5371   -0.5985
+      Occ. No.           2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    1.9815
+
+     1 C1     1s         1.0016    0.0000   -0.0267    0.0000   -0.0000    0.0000   -0.0000    0.0000    0.0000    0.0000
+     2 C1     2s         0.0089    0.0000    0.7409    0.0000   -0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+     3 C1     *s        -0.0099    0.0000   -0.1790    0.0000   -0.0000    0.0000   -0.0000    0.0000    0.0000    0.0000
+     4 C1     2px        0.0000    0.0000   -0.0000    0.0000   -0.2579    0.0043   -0.5738    0.0000    0.0000    0.0000
+     5 C1     *px       -0.0000    0.0000    0.0000    0.0000    0.0383   -0.0006    0.0852    0.0000    0.0000    0.0000
+     6 C1     2py       -0.0000    0.0000   -0.0000    0.0000   -0.4455    0.3950    0.2031    0.0000    0.0000    0.0000
+     7 C1     *py        0.0000    0.0000    0.0000    0.0000    0.0662   -0.0587   -0.0302    0.0000    0.0000    0.0000
+     8 C1     2pz        0.0000    0.0000    0.0000    0.0000    0.3617    0.4896   -0.1589    0.0000    0.0000    0.0000
+     9 C1     *pz       -0.0000    0.0000   -0.0000    0.0000   -0.0537   -0.0727    0.0236    0.0000    0.0000    0.0000
+    10 C1     *d2-       0.0000    0.0000    0.0000    0.0000    0.0109   -0.0097   -0.0050    0.0000    0.0000    0.0000
+    11 C1     *d1-      -0.0000    0.0000    0.0000    0.0000    0.0195   -0.0043   -0.0088    0.0000    0.0000    0.0000
+    12 C1     *d0        0.0000    0.0000    0.0000    0.0000    0.0089    0.0185    0.0108    0.0000    0.0000    0.0000
+    13 C1     *d1+      -0.0000    0.0000   -0.0000    0.0000   -0.0089   -0.0120    0.0039    0.0000    0.0000    0.0000
+    14 C1     *d2+      -0.0000    0.0000   -0.0000    0.0000   -0.0075    0.0109   -0.0220    0.0000    0.0000    0.0000
+    15 H2     1s         0.0000    0.0000    0.3082    0.0000   -0.2698    0.0045   -0.6005    0.0000    0.0000    0.0000
+    16 H2     *s         0.0012    0.0000   -0.1261    0.0000    0.0675   -0.0011    0.1503    0.0000    0.0000    0.0000
+    17 H2     *px        0.0004    0.0000   -0.0256    0.0000    0.0092   -0.0002    0.0205    0.0000    0.0000    0.0000
+    18 H2     *py       -0.0000    0.0000    0.0000    0.0000   -0.0090    0.0080    0.0041    0.0000    0.0000    0.0000
+    19 H2     *pz        0.0000    0.0000   -0.0000    0.0000    0.0073    0.0099   -0.0032    0.0000    0.0000    0.0000
+    20 H3     1s         0.0000    0.0000    0.3082    0.0000   -0.4762   -0.0049    0.4546    0.0000    0.0000    0.0000
+    21 H3     *s         0.0012    0.0000   -0.1261    0.0000    0.1192    0.0012   -0.1137    0.0000    0.0000    0.0000
+    22 H3     *px       -0.0001    0.0000    0.0085    0.0000   -0.0137   -0.0000   -0.0035    0.0000    0.0000    0.0000
+    23 H3     *py        0.0003    0.0000   -0.0187    0.0000    0.0096    0.0081   -0.0136    0.0000    0.0000    0.0000
+    24 H3     *pz       -0.0003    0.0000    0.0152    0.0000   -0.0079    0.0097    0.0113    0.0000    0.0000    0.0000
+    25 H4     1s         0.0000    0.0000    0.3082    0.0000    0.3718    0.5378    0.0775    0.0000    0.0000    0.0000
+    26 H4     *s         0.0012    0.0000   -0.1261    0.0000   -0.0930   -0.1346   -0.0194    0.0000    0.0000    0.0000
+    27 H4     *px       -0.0001    0.0000    0.0085    0.0000    0.0014    0.0097   -0.0102    0.0000    0.0000    0.0000
+    28 H4     *py        0.0001    0.0000   -0.0039    0.0000   -0.0120    0.0036    0.0035    0.0000    0.0000    0.0000
+    29 H4     *pz        0.0004    0.0000   -0.0238    0.0000   -0.0112   -0.0169   -0.0070    0.0000    0.0000    0.0000
+    30 H5     1s         0.0000    0.0000    0.3082    0.0000    0.3742   -0.5373    0.0684    0.0000    0.0000    0.0000
+    31 H5     *s         0.0012    0.0000   -0.1261    0.0000   -0.0936    0.1344   -0.0171    0.0000    0.0000    0.0000
+    32 H5     *px       -0.0001    0.0000    0.0085    0.0000    0.0015   -0.0095   -0.0103    0.0000    0.0000    0.0000
+    33 H5     *py       -0.0004    0.0000    0.0225    0.0000    0.0086   -0.0173    0.0073    0.0000    0.0000    0.0000
+    34 H5     *pz       -0.0001    0.0000    0.0086    0.0000    0.0140    0.0003   -0.0020    0.0000    0.0000    0.0000
+    35 C6     1s         0.0000    1.0016    0.0000   -0.0248    0.0000    0.0000    0.0000   -0.0000   -0.0000   -0.0043
+    36 C6     2s         0.0000    0.0079    0.0000    0.6744    0.0000    0.0000    0.0000    0.0000    0.0000    0.3145
+    37 C6     *s         0.0000   -0.0097    0.0000   -0.1619    0.0000    0.0000    0.0000    0.0000    0.0000   -0.0886
+    38 C6     2px        0.0000   -0.0021    0.0000   -0.2569    0.0000    0.0000    0.0000   -0.0000    0.0000    0.5846
+    39 C6     *px        0.0000    0.0004    0.0000    0.0393    0.0000    0.0000    0.0000    0.0000    0.0000   -0.0983
+    40 C6     2py        0.0000   -0.0000    0.0000   -0.0000    0.0000    0.0000    0.0000    0.4869    0.3960    0.0000
+    41 C6     *py        0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000   -0.0720   -0.0586   -0.0000
+    42 C6     2pz        0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000   -0.3960    0.4869   -0.0000
+    43 C6     *pz        0.0000   -0.0000    0.0000   -0.0000    0.0000    0.0000    0.0000    0.0586   -0.0720    0.0000
+    44 C6     *d2-       0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000   -0.0120   -0.0098    0.0000
+    45 C6     *d1-       0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000   -0.0214   -0.0043    0.0000
+    46 C6     *d0        0.0000    0.0000    0.0000    0.0054    0.0000    0.0000    0.0000   -0.0038    0.0185   -0.0126
+    47 C6     *d1+       0.0000   -0.0000    0.0000   -0.0000    0.0000    0.0000    0.0000    0.0098   -0.0120   -0.0000
+    48 C6     *d2+       0.0000   -0.0001    0.0000   -0.0094    0.0000    0.0000    0.0000   -0.0022    0.0107    0.0218
+    49 H7     1s         0.0000   -0.0025    0.0000    0.0124    0.0000    0.0000    0.0000   -0.0000    0.0000    0.7362
+    50 H7     *s         0.0000    0.0019    0.0000   -0.0471    0.0000    0.0000    0.0000    0.0000   -0.0000   -0.2083
+    51 H7     *px        0.0000    0.0005    0.0000   -0.0143    0.0000    0.0000    0.0000    0.0000   -0.0000   -0.0255
+    52 H7     *py        0.0000   -0.0000    0.0000   -0.0000    0.0000    0.0000    0.0000    0.0097    0.0079   -0.0000
+    53 H7     *pz        0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000   -0.0079    0.0097    0.0000
+    54 H8     1s         0.0000    0.0003    0.0000    0.3711    0.0000    0.0000    0.0000    0.6214   -0.0010   -0.0735
+    55 H8     *s         0.0000    0.0012    0.0000   -0.1375    0.0000    0.0000    0.0000   -0.1548    0.0003   -0.0014
+    56 H8     *px        0.0000   -0.0002    0.0000    0.0042    0.0000    0.0000    0.0000    0.0111   -0.0000    0.0114
+    57 H8     *py        0.0000    0.0003    0.0000   -0.0206    0.0000    0.0000    0.0000   -0.0144    0.0080    0.0002
+    58 H8     *pz        0.0000   -0.0003    0.0000    0.0168    0.0000    0.0000    0.0000    0.0118    0.0098   -0.0001
+    59 H9     1s         0.0000    0.0003    0.0000    0.3712    0.0000    0.0000    0.0000   -0.3098    0.5386   -0.0736
+    60 H9     *s         0.0000    0.0012    0.0000   -0.1375    0.0000    0.0000    0.0000    0.0772   -0.1342   -0.0014
+    61 H9     *px        0.0000   -0.0002    0.0000    0.0042    0.0000    0.0000    0.0000   -0.0055    0.0096    0.0114
+    62 H9     *py        0.0000    0.0001    0.0000   -0.0042    0.0000    0.0000    0.0000    0.0123    0.0037    0.0000
+    63 H9     *pz        0.0000    0.0004    0.0000   -0.0262    0.0000    0.0000    0.0000    0.0074   -0.0169    0.0002
+    64 H10    1s         0.0000    0.0003    0.0000    0.3712    0.0000    0.0000    0.0000   -0.3116   -0.5376   -0.0736
+    65 H10    *s         0.0000    0.0012    0.0000   -0.1375    0.0000    0.0000    0.0000    0.0776    0.1340   -0.0014
+    66 H10    *px        0.0000   -0.0002    0.0000    0.0042    0.0000    0.0000    0.0000   -0.0056   -0.0096    0.0114
+    67 H10    *py        0.0000   -0.0004    0.0000    0.0248    0.0000    0.0000    0.0000   -0.0048   -0.0173   -0.0002
+    68 H10    *pz        0.0000   -0.0001    0.0000    0.0094    0.0000    0.0000    0.0000   -0.0136    0.0002   -0.0001
+
+
+      Orbital                11
+      Energy            -0.0002
+      Occ. No.           0.0185
+
+     1 C1     1s         0.0000
+     2 C1     2s         0.0000
+     3 C1     *s         0.0000
+     4 C1     2px        0.0000
+     5 C1     *px        0.0000
+     6 C1     2py        0.0000
+     7 C1     *py        0.0000
+     8 C1     2pz        0.0000
+     9 C1     *pz        0.0000
+    10 C1     *d2-       0.0000
+    11 C1     *d1-       0.0000
+    12 C1     *d0        0.0000
+    13 C1     *d1+       0.0000
+    14 C1     *d2+       0.0000
+    15 H2     1s         0.0000
+    16 H2     *s         0.0000
+    17 H2     *px        0.0000
+    18 H2     *py        0.0000
+    19 H2     *pz        0.0000
+    20 H3     1s         0.0000
+    21 H3     *s         0.0000
+    22 H3     *px        0.0000
+    23 H3     *py        0.0000
+    24 H3     *pz        0.0000
+    25 H4     1s         0.0000
+    26 H4     *s         0.0000
+    27 H4     *px        0.0000
+    28 H4     *py        0.0000
+    29 H4     *pz        0.0000
+    30 H5     1s         0.0000
+    31 H5     *s         0.0000
+    32 H5     *px        0.0000
+    33 H5     *py        0.0000
+    34 H5     *pz        0.0000
+    35 C6     1s         0.1423
+    36 C6     2s         1.0287
+    37 C6     *s        -0.3647
+    38 C6     2px        1.1809
+    39 C6     *px       -0.3510
+    40 C6     2py        0.0001
+    41 C6     *py       -0.0000
+    42 C6     2pz       -0.0000
+    43 C6     *pz        0.0000
+    44 C6     *d2-       0.0000
+    45 C6     *d1-       0.0000
+    46 C6     *d0       -0.0526
+    47 C6     *d1+      -0.0000
+    48 C6     *d2+       0.0911
+    49 H7     1s        -1.7196
+    50 H7     *s         0.6248
+    51 H7     *px       -0.0374
+    52 H7     *py        0.0000
+    53 H7     *pz       -0.0000
+    54 H8     1s        -0.0315
+    55 H8     *s         0.0126
+    56 H8     *px        0.0077
+    57 H8     *py        0.0011
+    58 H8     *pz       -0.0009
+    59 H9     1s        -0.0315
+    60 H9     *s         0.0127
+    61 H9     *px        0.0077
+    62 H9     *py        0.0002
+    63 H9     *pz        0.0014
+    64 H10    1s        -0.0315
+    65 H10    *s         0.0127
+    66 H10    *px        0.0077
+    67 H10    *py       -0.0013
+    68 H10    *pz       -0.0005
+--
+
+      Von Neumann Entropy (Root   1) =  0.07562
+
+
+      Mulliken population analysis for root number:  1
+      -----------------------------------------------
+
+
+++    Molecular charges:
+      ------------------
+
+      Mulliken charges per centre and basis function type
+      ---------------------------------------------------
+
+                C1      H2      H3      H4      H5      C6      H7      H8      H9      H10   
+      1s       2.0032  1.2466  1.2466  1.2466  1.2466  2.0033  1.2622  1.2485  1.2485  1.2485
+      2s       1.4465  0.0000  0.0000  0.0000  0.0000  1.4519  0.0000  0.0000  0.0000  0.0000
+      2px      1.1641  0.0000  0.0000  0.0000  0.0000  1.1782  0.0000  0.0000  0.0000  0.0000
+      2pz      1.1641  0.0000  0.0000  0.0000  0.0000  1.1609  0.0000  0.0000  0.0000  0.0000
+      2py      1.1641  0.0000  0.0000  0.0000  0.0000  1.1609  0.0000  0.0000  0.0000  0.0000
+      *s      -0.3421 -0.3188 -0.3188 -0.3188 -0.3188 -0.3506 -0.3261 -0.3185 -0.3185 -0.3185
+      *px     -0.1577  0.0207  0.0067  0.0067  0.0067 -0.1762  0.0181  0.0067  0.0067  0.0067
+      *pz     -0.1577  0.0050  0.0105  0.0186  0.0067 -0.1568  0.0049  0.0105  0.0186  0.0067
+      *py     -0.1578  0.0050  0.0133  0.0053  0.0172 -0.1568  0.0049  0.0133  0.0053  0.0172
+      *d2+     0.0122  0.0000  0.0000  0.0000  0.0000  0.0119  0.0000  0.0000  0.0000  0.0000
+      *d1+     0.0044  0.0000  0.0000  0.0000  0.0000  0.0044  0.0000  0.0000  0.0000  0.0000
+      *d0      0.0100  0.0000  0.0000  0.0000  0.0000  0.0099  0.0000  0.0000  0.0000  0.0000
+      *d1-     0.0089  0.0000  0.0000  0.0000  0.0000  0.0088  0.0000  0.0000  0.0000  0.0000
+      *d2-     0.0044  0.0000  0.0000  0.0000  0.0000  0.0044  0.0000  0.0000  0.0000  0.0000
+      Total    6.1665  0.9584  0.9584  0.9584  0.9584  6.1543  0.9639  0.9606  0.9606  0.9606
+
+      N-E     -0.1665  0.0416  0.0416  0.0416  0.0416 -0.1543  0.0361  0.0394  0.0394  0.0394
+
+      Total electronic charge=   20.000000
+
+      Total            charge=   -0.000000
+--
+
+
+
+      Expectation values of various properties for root number:  1
+      -----------------------------------------------------------
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =   -0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X= -1.3450E-02               Y= -9.5843E-07               Z=  6.8219E-07           Total=  1.3450E-02
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=   -1.0655   51.1224   -0.0000
+                  XX= -1.6850E+01              XY= -6.7245E-01              XZ= -3.2644E-05              YY= -1.6820E+01
+                  YZ= -9.1513E-05              ZZ= -1.6821E+01
+      In traceless form (Debye*Ang)
+                  XX= -2.9896E-02              XY= -1.0087E+00              XZ= -4.8967E-05              YY=  1.5089E-02
+                  YZ= -1.3727E-04              ZZ=  1.4807E-02
+--
+
+
+      Input file to MOLDEN was generated!
+
+      Average orbitals are written to the RASORB file
+      Natural orbitals for root   1 are written to the RASORB.1 file
+      Spin density orbitals for root   1 are written to the SPDORB.1 file
+
+--- Stop Module: rasscf at Tue Jul 16 12:15:41 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: extensive.rasscf.molden extensive.RasOrb.1 extensive.RasOrb extensive.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0709
+--- Module rasscf spent 2 seconds ---
+
+.##################.
+.# Happy landing! #.
+.##################.
+
+    Timing: Wall=3.86 User=3.41 System=0.43

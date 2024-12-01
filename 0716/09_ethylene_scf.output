@@ -1,0 +1,3771 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: 24.02
+                   OPENMOLCASO
+                       OPE                tag: 428-g03afa2e9a
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.28                       *
+           *   build c4a6d18ded8cb6cad61d2372a9abd97c      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: DESKTOP-ET1S6F4 (Linux)
+C Compiler ID: GNU
+C flags: -std=gnu99 -fopenmp
+Fortran Compiler ID: GNU
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fopenmp
+Definitions: _WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   ----------------------------------------------------------------------
+  |
+  |           Project: 09_ethylene_scf
+  |    Submitted from: /home/kenya/molcas_test/0716
+  |      Scratch area: /tmp/09_ethylene_scf
+  |   Save outputs to: /home/kenya/molcas_test/0716
+  |            Molcas: /home/kenya/OpenMolcas/builds/gnu_dev_omp
+  |
+  | Scratch area is empty
+  |
+  |    MOLCAS_DRIVER = /home/kenya/OpenMolcas/builds/gnu_dev_omp/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /home/kenya/OpenMolcas
+  | MOLCAS_STRUCTURE = 0
+  |
+   ----------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&GATEWAY
+  Coord
+  6
+  twisted pyramidal
+  C  -0.0268124148   0.0146727301  -0.6433152174
+  C  -0.1789970372  -0.0454557662   0.7799261438
+  H   0.6117000872   0.7368010260  -1.1825364226
+  H  -0.4935302484  -0.7457813338  -1.2883279904
+  H   0.9679707951  -0.0807166158   0.9463909612
+  H  -0.2501109509   0.9765365107   1.2374969793
+  Basis = cc-pVDZ
+  Group = C1
+  RICD
+  Constraints
+    a = Ediff 1 2
+  Values
+    a = 0.00
+  End of Constraints
+
+>>> DO WHILE
+
+  &SEWARD
+
+  >>> IF (ITER == 1)
+
+    &SCF
+
+  >>> END IF
+
+  &RASSCF
+    Inactive = 7
+    RAS2   = 2
+    nActEl = 2 0 0
+    CIRoot = 2 2 1
+
+  &SLAPAF
+    Kriging
+
+>>> END DO
+
+-- ----------------------------------
+
+--- Start Module: gateway at Tue Jul 16 14:02:14 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &GATEWAY
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200105
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+++    Symmetry information:
+      ---------------------
+
+                    Character Table for C1 
+
+                             E  
+                    a        1  x, y, xy, Rz, z, xz, Ry, yz, Rx, I
+--
+
+
+++    Basis set information:
+      ----------------------
+
+
+      Basis set label: C.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   6.000000 au
+      Associated Actual Charge      6.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       9       3        X                  
+         p       4       2        X                  
+         d       1       1                 X         
+
+
+      Basis set label: H.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   1.000000 au
+      Associated Actual Charge      1.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       4       2        X                  
+         p       1       1        X                  
+--
+
+
+++    Molecular structure info:
+      -------------------------
+
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+
+     Center  Label                x              y              z                     x              y              z
+        1      C1              -0.050668       0.027727      -1.215690             -0.026812       0.014673      -0.643315
+        2      C2              -0.338255      -0.085899       1.473847             -0.178997      -0.045456       0.779926
+        3      H3               1.155946       1.392352      -2.234670              0.611700       0.736801      -1.182536
+        4      H4              -0.932637      -1.409322      -2.434587             -0.493530      -0.745781      -1.288328
+        5      H5               1.829200      -0.152532       1.788420              0.967971      -0.080717       0.946391
+        6      H6              -0.472641       1.845387       2.338530             -0.250111       0.976537       1.237497
+
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5            6 H6    
+    1 C1       0.000000
+    2 C2       2.707254        0.000000
+    3 H3       2.087208        4.262741        0.000000
+    4 H4       2.080551        4.169004        3.500218        0.000000
+    5 H5       3.548390        2.191177        4.361787        5.200101        0.000000
+    6 H6       4.014278        2.120283        4.875623        5.795462        3.097220        0.000000
+
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5            6 H6    
+    1 C1       0.000000
+    2 C2       1.432617        0.000000
+    3 H3       1.104503        2.255745        0.000000
+    4 H4       1.100980        2.206142        1.852236        0.000000
+    5 H5       1.877727        1.159521        2.308159        2.751775        0.000000
+    6 H6       2.124264        1.122006        2.580068        3.066826        1.638978        0.000000
+
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 C2       1 C1       3 H3       125.02
+                      2 C2       1 C1       4 H4       120.53
+                      3 H3       1 C1       4 H4       114.24
+                      1 C1       2 C2       5 H5        92.22
+                      1 C1       2 C2       6 H6       111.94
+                      5 H5       2 C2       6 H6        91.82
+
+           ***************************************************************
+           *              Valence Dihedral Angles / Degree               *
+           ***************************************************************
+                    Atom centers                       Phi1     Phi2     Theta 
+           3 H3       1 C1       2 C2       5 H5        125.02    92.22   -51.97
+           3 H3       1 C1       2 C2       6 H6        125.02   111.94    40.90
+           4 H4       1 C1       2 C2       5 H5        120.53    92.22   122.52
+           4 H4       1 C1       2 C2       6 H6        120.53   111.94  -144.61
+--
+
+
+            Nuclear Potential Energy             32.06427301 au
+
+--- Stop Module: gateway at Tue Jul 16 14:02:14 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.RICDLib xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+--- Start Module: seward at Tue Jul 16 14:02:14 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SEWARD
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200108
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Velocity integrals
+                  Orbital angular momentum around (-0.1097  0.0354  0.0910 )
+                  Velocity quadrupole around (-0.1097  0.0354  0.0910 )
+                  RI decomposed two-electron repulsion integrals stored Cholesky style
+                   - acCD auxiliary basis
+                   - CD Threshold:   0.10E-03
+
+                   Integrals are discarded if absolute value <: 1.00E-14
+                   Integral cutoff threshold is set to       <: 1.00E-16
+
+            Nuclear Potential Energy             32.06427301 au
+
+
+      Basis set specifications :
+      Symmetry species         a  
+      Basis functions           48
+
+
+      Input file to MOLDEN was generated!
+
+--- Stop Module: seward at Tue Jul 16 14:02:14 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.GssOrb 09_ethylene_scf.guessorb.molden xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.GssOrb
+--- Start Module: scf at Tue Jul 16 14:02:14 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                                &SCF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200113
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+++    Input section:
+      --------------
+
+      Header of the integral files:
+      
+       Integrals generated by Gateway/Seward, Tue Jul 16 14:02:14 2024
+
+
+      Cartesian coordinates in Angstrom:
+      -----------------------------------------------------
+      No.  Label        X            Y            Z        
+      -----------------------------------------------------
+       1   C1        -0.02681241   0.01467273  -0.64331522
+       2   C2        -0.17899704  -0.04545577   0.77992614
+       3   H3         0.61170009   0.73680103  -1.18253642
+       4   H4        -0.49353025  -0.74578133  -1.28832799
+       5   H5         0.96797080  -0.08071662   0.94639096
+       6   H6        -0.25011095   0.97653651   1.23749698
+      -----------------------------------------------------
+      Nuclear repulsion energy =   32.06427301
+--
+
+++    Orbital specifications:
+      -----------------------
+
+      Symmetry species               1
+                                     a
+      Frozen orbitals                0
+      Occupied orbitals              8
+      Secondary orbitals            40
+      Deleted orbitals               0
+      Total number of orbitals      48
+      Number of basis functions     48
+--
+
+      Molecular charge                           0.000
+
+++    Optimization specifications:
+      ----------------------------
+
+      SCF Algorithm: LK-RI/DF
+      LK screening threshold:                     4.50E-02
+      Local-Exchange (LK) algorithm.
+       - the density matrix is decomposed
+      The actual AO density is used
+      Number of density matrices in core                 5
+      Maximum number of NDDO SCF iterations            400
+      Maximum number of HF SCF iterations              400
+      Threshold for SCF energy change             1.00E-09
+      Threshold for density matrix                1.00E-04
+      Threshold for Fock matrix                   1.50E-04
+      Threshold for linear dependence             1.00E-09
+      Threshold at which DIIS is turned on        1.50E-01
+      Maximum depth in the DIIS procedure                5
+      Maximum depth in the BFGS Hessian update          30
+      Threshold at which QNR/C2DIIS is turned on  7.50E-02
+      Threshold for Norm(delta) (QNR/C2DIIS)      1.00E-03
+      All orbitals punched on: SCFORB
+--
+
+      Input vectors read from INPORB
+      Orbital file label: *Guess orbitals
+
+
+++ Convergence information
+                                   SCF        iterations: Energy and convergence statistics
+
+Iter     Tot. SCF        One-elec.       Two-elec.     Energy      Max Dij or  Max Fij      DNorm      TNorm      AccCon     Time
+         Energy          Energy          Energy        Change      Delta Norm                                                in Sec.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   1   -77.596972559  -165.746044096    56.084798529   0.00E+00    2.14E-01*   8.57E-02*    6.02E+00   5.34E+01   None         0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   2   -77.821952232  -167.548064463    57.661839223  -2.25E-01*   2.27E-01*   7.70E-02*    6.83E+00   5.42E+01   EDIIS        0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   3   -77.853072421  -166.988423908    57.071078479  -3.11E-02*   6.23E-02*   2.61E-02*    6.72E+00   5.40E+01   EDIIS        0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   4   -77.861132010  -167.213629556    57.288224537  -8.06E-03*   3.64E-02*   1.48E-02*    6.88E+00   5.41E+01   c2DIIS       0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   5   -77.864126144  -167.152097732    57.223698579  -2.99E-03*   9.76E-03*   3.44E-03*    6.86E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   6   -77.864344827  -167.149268959    57.220651123  -2.19E-04*   1.35E-02*   2.80E-03*    6.87E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   7   -77.864436429  -167.149239668    57.220530231  -9.16E-05*   1.75E-03*   4.54E-04*    6.89E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   8   -77.864442103  -167.148852999    57.220137887  -5.67E-06*   4.56E-03*   4.24E-04*    6.89E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+   9   -77.864448731  -167.148947208    57.220225468  -6.63E-06*   4.05E-03*   3.03E-04*    6.88E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+  10   -77.864451808  -167.148911077    57.220186260  -3.08E-06*   6.27E-03*   2.24E-04*    6.88E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+  11   -77.864455822  -167.149389811    57.220660981  -4.01E-06*   2.42E-04    6.02E-05     6.88E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+  12   -77.864455885  -167.148824960    57.220096066  -6.26E-08*   2.25E-04    3.90E-05     6.88E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+  13   -77.864455910  -167.149004355    57.220275437  -2.52E-08*   3.67E-05    7.67E-06     6.88E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+  14   -77.864455911  -167.148955188    57.220226268  -1.31E-09*   1.56E-05    2.37E-06     6.88E+00   5.40E+01   QNRc2DIIS    0.
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                   25                29400
+ IFG                    9                10584
+  15   -77.864455912  -167.148991961    57.220263041  -2.33E-10    5.00E-06    6.20E-07     6.88E+00   5.40E+01   QNRc2DIIS    0.
+
+       Convergence after  15 Macro Iterations
+--
+
+ *****************************************************************************************************************************
+ *                                                                                                                           *
+ *                                             SCF/KS-DFT Program, Final results                                             *
+ *                                                                                                                           *
+ *                                                                                                                           *
+ *                                                                                                                           *
+ *                                                       Final Results                                                       *
+ *                                                                                                                           *
+ *****************************************************************************************************************************
+
+::    Total SCF energy                                -77.8644559116
+      One-electron energy                            -167.1489919607
+      Two-electron energy                              57.2202630406
+      Nuclear repulsion energy                         32.0642730085
+      Kinetic energy (interpolated)                    77.6821272540
+      Virial theorem                                    1.0023471121
+      Total spin, S(S+1)                                0.0000000000
+      Total spin, S                                     0.0000000000
+      Max non-diagonal density matrix element           0.0000076360
+      Max non-diagonal Fock matrix element              0.0000010800
+
+
+      All orbitals with orbital energies smaller than  E(LUMO)+0.5 are printed
+
+++    Molecular orbitals:
+      -------------------
+
+      Title: SCF orbitals
+
+      Molecular orbitals for symmetry species 1: a  
+
+          Orbital            1         2         3         4         5         6         7         8         9        10    
+          Energy          -11.3656  -11.1655   -1.0419   -0.8155   -0.6538   -0.5425   -0.4845   -0.2849    0.0336    0.1723
+          Occ. No.          2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    0.0000    0.0000
+
+        1 C1     1s         1.0011   -0.0026   -0.0112    0.0037   -0.0023   -0.0051   -0.0037    0.0065    0.0019    0.0489
+        2 C1     2s         0.0063   -0.0004    0.7210   -0.3888   -0.0303   -0.2174   -0.0973    0.1146   -0.0292   -0.2204
+        3 C1     *s        -0.0073    0.0021   -0.1719    0.0901    0.0034   -0.0083    0.0110   -0.0648   -0.0519   -1.4957
+        4 C1     2px        0.0005    0.0000   -0.0009   -0.0168    0.4074   -0.0349    0.2390   -0.0663   -0.5414   -0.0741
+        5 C1     *px       -0.0003    0.0003    0.0092    0.0051   -0.0859    0.0070    0.0071    0.0407   -0.2836   -0.1263
+        6 C1     2py       -0.0003    0.0001    0.0027    0.0402    0.5195   -0.1262   -0.2108   -0.0697    0.4059   -0.0769
+        7 C1     *py        0.0003    0.0007    0.0098   -0.0051   -0.1102    0.0258   -0.0016    0.0411    0.2067   -0.0895
+        8 C1     2pz       -0.0014   -0.0004    0.1180    0.4192   -0.1031   -0.5545   -0.1100    0.1225   -0.1103    0.2625
+        9 C1     *pz        0.0003    0.0011   -0.0346   -0.0784    0.0275    0.0752    0.0172   -0.0475   -0.0525    0.5335
+       10 C1     *d2-       0.0008    0.0000    0.0003   -0.0086    0.0055    0.0042    0.0004   -0.0067    0.0016   -0.0151
+       11 C1     *d1-       0.0002   -0.0000    0.0006   -0.0008   -0.0195    0.0196   -0.0119    0.0365   -0.0076    0.0001
+       12 C1     *d0        0.0004   -0.0007    0.0168    0.0139   -0.0062   -0.0076   -0.0008    0.0014    0.0015   -0.0083
+       13 C1     *d1+      -0.0002   -0.0000   -0.0010    0.0018   -0.0129    0.0084    0.0271    0.0289    0.0153    0.0010
+       14 C1     *d2+      -0.0003    0.0000    0.0007    0.0031    0.0036   -0.0050    0.0045   -0.0008    0.0005    0.0044
+       15 C2     1s         0.0023    1.0016   -0.0192   -0.0144   -0.0008   -0.0051    0.0014    0.0036    0.0007    0.0322
+       16 C2     2s        -0.0001    0.0087    0.4558    0.5041   -0.0987    0.1061   -0.0371   -0.3732   -0.0125    0.0050
+       17 C2     *s         0.0011   -0.0096   -0.1255   -0.1315    0.0144    0.0588   -0.0073   -0.1353    0.0043   -0.7105
+       18 C2     2px       -0.0000    0.0029    0.0595    0.0864    0.0941    0.0063    0.4310    0.3835    0.1363   -0.0812
+       19 C2     *px       -0.0002   -0.0028   -0.0243   -0.0333   -0.0192   -0.0014   -0.0691    0.0737    0.0346   -0.1541
+       20 C2     2py       -0.0000    0.0030    0.0407    0.0927    0.1352    0.2006   -0.3042    0.5313   -0.0868   -0.0197
+       21 C2     *py       -0.0002   -0.0030   -0.0199   -0.0374   -0.0286   -0.0427    0.0478    0.0914   -0.0206   -0.0641
+       22 C2     2pz        0.0000   -0.0019   -0.1650    0.0236    0.0933    0.5038    0.0871   -0.2452    0.0407   -0.1340
+       23 C2     *pz       -0.0009    0.0021    0.0526    0.0115   -0.0352   -0.1283   -0.0142   -0.0651    0.0019   -0.0606
+       24 C2     *d2-      -0.0001    0.0001    0.0010    0.0020    0.0067    0.0033    0.0019    0.0229    0.0025    0.0016
+       25 C2     *d1-      -0.0001    0.0003   -0.0048    0.0010   -0.0111    0.0192    0.0105   -0.0138   -0.0144   -0.0077
+       26 C2     *d0       -0.0000    0.0000    0.0187   -0.0068   -0.0122   -0.0327   -0.0136   -0.0021   -0.0050    0.0074
+       27 C2     *d1+       0.0000   -0.0001   -0.0068   -0.0005   -0.0075    0.0158   -0.0111   -0.0134    0.0191   -0.0029
+       28 C2     *d2+       0.0000    0.0000    0.0013    0.0002   -0.0006   -0.0100    0.0350   -0.0036    0.0176   -0.0063
+       29 H3     1s        -0.0007   -0.0005    0.2424   -0.3269    0.5669    0.0317   -0.0073   -0.2564   -0.0194    0.0419
+       30 H3     *s         0.0014    0.0001   -0.1184    0.1298   -0.1776   -0.0147   -0.0016   -0.0421    0.0163    1.4611
+       31 H3     *px        0.0004   -0.0000   -0.0126    0.0131   -0.0122   -0.0028    0.0033    0.0009   -0.0143   -0.0069
+       32 H3     *py        0.0004   -0.0000   -0.0143    0.0156   -0.0132   -0.0054   -0.0042    0.0017    0.0111   -0.0113
+       33 H3     *pz       -0.0002   -0.0001    0.0109   -0.0053    0.0125   -0.0075   -0.0015    0.0022   -0.0017    0.0080
+       34 H4     1s        -0.0008    0.0001    0.2385   -0.3793   -0.4460    0.3275    0.0670    0.1998    0.0139    0.0561
+       35 H4     *s         0.0016    0.0005   -0.1087    0.1600    0.1511   -0.0808   -0.0167    0.0078    0.0283    0.9779
+       36 H4     *px       -0.0003    0.0001    0.0090   -0.0126   -0.0046    0.0062    0.0056   -0.0002   -0.0150    0.0056
+       37 H4     *py       -0.0005    0.0001    0.0145   -0.0191   -0.0099    0.0090   -0.0010    0.0004    0.0116    0.0076
+       38 H4     *pz       -0.0003   -0.0000    0.0124   -0.0092   -0.0146   -0.0001   -0.0009    0.0030   -0.0030    0.0063
+       39 H5     1s         0.0003   -0.0003    0.1902    0.2777    0.0648    0.1636    0.5670    0.1421    0.3487    0.0040
+       40 H5     *s         0.0004    0.0014   -0.0861   -0.1071   -0.0181   -0.0253   -0.0860   -0.0418    0.1774    0.4121
+       41 H5     *px       -0.0001    0.0009   -0.0154   -0.0185   -0.0017   -0.0081   -0.0159    0.0014   -0.0064   -0.0071
+       42 H5     *py        0.0000   -0.0000    0.0022    0.0044    0.0039    0.0075   -0.0062    0.0165   -0.0005    0.0048
+       43 H5     *pz       -0.0001    0.0002   -0.0069   -0.0038   -0.0011    0.0110   -0.0122   -0.0091    0.0053   -0.0054
+       44 H6     1s         0.0001   -0.0003    0.1542    0.2932    0.0862    0.4846   -0.3378    0.1889   -0.2593    0.0001
+       45 H6     *s         0.0002    0.0016   -0.0684   -0.1117   -0.0284   -0.1087    0.0520   -0.0337   -0.0998    0.2921
+       46 H6     *px        0.0001   -0.0001    0.0030    0.0057    0.0024    0.0048    0.0092    0.0121    0.0043    0.0035
+       47 H6     *py       -0.0001    0.0008   -0.0116   -0.0173   -0.0035   -0.0179    0.0090    0.0026    0.0034   -0.0015
+       48 H6     *pz       -0.0001    0.0002   -0.0080   -0.0091    0.0002   -0.0030    0.0115   -0.0105    0.0014   -0.0072
+
+          Orbital           11        12        13        14    
+          Energy            0.2129    0.2448    0.2806    0.4253
+          Occ. No.          0.0000    0.0000    0.0000    0.0000
+
+        1 C1     1s         0.0252   -0.0278    0.0021   -0.0313
+        2 C1     2s        -0.0819   -0.0170    0.0385    0.1483
+        3 C1     *s        -0.7945    0.6534   -0.0289    2.1348
+        4 C1     2px        0.2047    0.2177    0.0218   -0.0495
+        5 C1     *px        0.4233    0.5871   -0.1447   -0.3959
+        6 C1     2py        0.2766    0.2829    0.0120    0.0086
+        7 C1     *py        0.5780    0.7558    0.3456   -0.2285
+        8 C1     2pz        0.1007   -0.0107    0.0544    0.1948
+        9 C1     *pz        0.0862    0.2940    0.1114    2.5928
+       10 C1     *d2-      -0.0001    0.0023    0.0024    0.0325
+       11 C1     *d1-      -0.0105   -0.0136   -0.0214    0.0304
+       12 C1     *d0        0.0076   -0.0133    0.0013    0.0125
+       13 C1     *d1+      -0.0070   -0.0138    0.0097    0.0184
+       14 C1     *d2+       0.0027    0.0059   -0.0198   -0.0148
+       15 C2     1s        -0.0594    0.0704    0.0165    0.0773
+       16 C2     2s         0.0700   -0.0258   -0.0311    0.0363
+       17 C2     *s         1.2851   -1.5674   -0.4451   -2.6459
+       18 C2     2px        0.1269   -0.1984    0.3354    0.0738
+       19 C2     *px        0.2361   -0.6161    0.6994   -0.0519
+       20 C2     2py        0.0919   -0.0823   -0.3351    0.1191
+       21 C2     *py        0.1305   -0.4637   -0.8268    0.1117
+       22 C2     2pz        0.0542   -0.0056   -0.0228    0.3636
+       23 C2     *pz        0.0850   -0.0197   -0.1103    2.2205
+       24 C2     *d2-       0.0056   -0.0105    0.0015    0.0180
+       25 C2     *d1-       0.0069   -0.0142    0.0011    0.0105
+       26 C2     *d0       -0.0114    0.0100    0.0021   -0.0500
+       27 C2     *d1+      -0.0029    0.0017   -0.0131    0.0164
+       28 C2     *d2+       0.0041   -0.0062    0.0479   -0.0111
+       29 H3     1s         0.0309   -0.0458    0.0356    0.1743
+       30 H3     *s        -0.6477   -1.6071   -0.1018    0.7612
+       31 H3     *px        0.0014    0.0134   -0.0073    0.0029
+       32 H3     *py        0.0048    0.0103    0.0094    0.0083
+       33 H3     *pz       -0.0075   -0.0058   -0.0022    0.0254
+       34 H4     1s         0.0795   -0.0463    0.0087    0.3304
+       35 H4     *s         1.6595    1.1922    0.2352    0.1827
+       36 H4     *px        0.0094    0.0035    0.0028   -0.0143
+       37 H4     *py        0.0137    0.0056   -0.0017   -0.0164
+       38 H4     *pz        0.0084    0.0103    0.0065    0.0021
+       39 H5     1s        -0.0325   -0.0061   -0.0552   -0.1895
+       40 H5     *s        -0.9068    1.1208   -1.4032   -0.1133
+       41 H5     *px        0.0110   -0.0154    0.0177   -0.0004
+       42 H5     *py       -0.0023    0.0041   -0.0011    0.0098
+       43 H5     *pz        0.0031    0.0000    0.0121    0.0087
+       44 H6     1s        -0.0460   -0.0253    0.0244    0.0029
+       45 H6     *s        -0.7923    0.7791    1.8608   -0.7131
+       46 H6     *px       -0.0032    0.0035    0.0067    0.0086
+       47 H6     *py        0.0119   -0.0117   -0.0239   -0.0018
+       48 H6     *pz        0.0065   -0.0073   -0.0156    0.0040
+--
+
+
+++    Molecular charges:
+      ------------------
+
+      Mulliken charges per centre and basis function type
+      ---------------------------------------------------
+
+                C1      C2      H3      H4      H5      H6    
+      1s       2.0023  2.0032  1.2542  1.2451  1.1613  1.2066
+      2s       1.6160  1.5097  0.0000  0.0000  0.0000  0.0000
+      2px      0.6766  1.0562  0.0000  0.0000  0.0000  0.0000
+      2pz      1.2826  1.0118  0.0000  0.0000  0.0000  0.0000
+      2py      0.9394  1.2318  0.0000  0.0000  0.0000  0.0000
+      *s      -0.3557 -0.2067 -0.3655 -0.3810 -0.2603 -0.2869
+      *px     -0.0773 -0.0596  0.0092  0.0065  0.0171  0.0079
+      *pz     -0.1747 -0.1504  0.0084  0.0098  0.0086  0.0084
+      *py     -0.1409  0.0009  0.0122  0.0134  0.0098  0.0166
+      *d2+     0.0008  0.0182  0.0000  0.0000  0.0000  0.0000
+      *d1+     0.0268  0.0051  0.0000  0.0000  0.0000  0.0000
+      *d0      0.0097  0.0259  0.0000  0.0000  0.0000  0.0000
+      *d1-     0.0342  0.0079  0.0000  0.0000  0.0000  0.0000
+      *d2-     0.0034  0.0014  0.0000  0.0000  0.0000  0.0000
+      Total    5.8431  6.4555  0.9185  0.8938  0.9365  0.9526
+
+      N-E      0.1569 -0.4555  0.0815  0.1062  0.0635  0.0474
+
+      Total electronic charge=   16.000000
+
+      Total            charge=   -0.000000
+--
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =   -0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X=  1.5267E+00               Y=  1.4044E+00               Z= -3.7469E+00           Total=  4.2828E+00
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=   -0.0580    0.0187    0.0482
+                  XX= -1.4085E+01              XY= -7.3552E-01              XZ=  1.8566E+00              YY= -1.4547E+01
+                  YZ=  2.1809E+00              ZZ= -1.4361E+01
+      In traceless form (Debye*Ang)
+                  XX=  3.6904E-01              XY= -1.1033E+00              XZ=  2.7848E+00              YY= -3.2429E-01
+                  YZ=  3.2714E+00              ZZ= -4.4759E-02
+--
+
+
+      Input file to MOLDEN was generated!
+
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: RunFile label nBas                                          ###
+ ###    was used       62 times                                              ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+--- Stop Module: scf at Tue Jul 16 14:02:15 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.scf.molden 09_ethylene_scf.ScfOrb xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.ScfOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:15 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &RASSCF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200141
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+      Header of the ONEINT file:
+      --------------------------
+      
+      Integrals generated by Gateway/Seward, Tue Jul 16 14:02:14 2024
+
+
+      OrdInt status: non-squared
+
+
+      Cartesian coordinates in Angstrom:
+      -----------------------------------------------------
+      No.  Label        X            Y            Z        
+      -----------------------------------------------------
+       1   C1        -0.02681241   0.01467273  -0.64331522
+       2   C2        -0.17899704  -0.04545577   0.77992614
+       3   H3         0.61170009   0.73680103  -1.18253642
+       4   H4        -0.49353025  -0.74578133  -1.28832799
+       5   H5         0.96797080  -0.08071662   0.94639096
+       6   H6        -0.25011095   0.97653651   1.23749698
+      -----------------------------------------------------
+      Nuclear repulsion energy =   32.06427301
+
+++    Wave function specifications:
+      -----------------------------
+
+      Number of closed shell electrons          14
+      Number of electrons in active shells       2
+      Max number of holes in RAS1 space          0
+      Max nr of electrons in RAS3 space          0
+      Number of inactive orbitals                7
+      Number of active orbitals                  2
+      Number of secondary orbitals              39
+      Spin quantum number                      0.0
+      State symmetry                             1
+--
+
+++    Orbital specifications:
+      -----------------------
+
+      Symmetry species                           1
+                                                 a
+      Frozen orbitals                            0
+      Inactive orbitals                          7
+      Active orbitals                            2
+      RAS1 orbitals                              0
+      RAS2 orbitals                              2
+      RAS3 orbitals                              0
+      Secondary orbitals                        39
+      Deleted orbitals                           0
+      Number of basis functions                 48
+--
+
+++    CI expansion specifications:
+      ----------------------------
+
+      Number of CSFs                             3
+      Number of determinants                     3
+      Number of root(s) required                 2
+      Root chosen for geometry opt.              2
+      CI roots used                              1     2
+      weights                                0.500 0.500
+      highest root included in the CI            2
+      max. size of the explicit Hamiltonian      3
+--
+
+++    Optimization specifications:
+      ----------------------------
+
+      RASSCF algorithm: LK RI/DF
+      Maximum number of macro iterations       200
+      Maximum number of SX iterations          100
+      Threshold for RASSCF energy            1.000E-08
+      Threshold for max MO rotation          1.000E-01
+      Threshold for max BLB element          1.000E-04
+      Level shift parameter                  5.000E-01
+      Make Quasi-Newton update
+--
+
+      Orbitals from runfile: scf orbitals
+      The MO-coefficients are taken from scf orbitals on runfile
+
+      Total molecular charge    0.00
+
+      ************************************************************************************************************************
+      *                                                                                                                      *
+      *                                            Wave function control section                                             *
+      *                                                                                                                      *
+      ************************************************************************************************************************
+
+
+                                         RASSCF iterations: Energy and convergence statistics
+                                         ----------------------------------------------------
+
+      Iter CI   SX   CI       RASSCF       Energy    max ROT     max BLB   max BLB  Level Ln srch  Step   QN   Walltime
+          iter iter root      energy       change     param      element    value   shift minimum  type update hh:mm:ss
+ Nr of preliminary CI iterations:   1
+        1   1    6    0   -77.84730366    0.00E+00  -4.73E-02    6  14 1 -5.69E-02*  0.17   0.00    SX    NO    0:00:00
+        2   1    5    0   -77.86200806   -1.47E-02*  2.58E-02    8  20 1 -1.96E-02*  0.19   0.00    SX    NO    0:00:00
+        3   1    5    0   -77.86382406   -1.82E-03* -7.06E-03    7   9 1 -6.80E-03*  0.19   0.00    SX    NO    0:00:00
+        4   1    5    0   -77.86407783   -2.54E-04* -4.06E-03    8  20 1 -2.34E-03*  0.19   0.00    SX    NO    0:00:00
+        5   1    4    0   -77.86412325   -4.54E-05* -2.47E-03    7   9 1 -1.40E-03*  0.19   1.22    QN   YES    0:00:00
+        6   1    4    0   -77.86413618   -1.29E-05* -8.55E-04    7   9 1 -4.90E-04*  0.19   1.26    QN   YES    0:00:00
+        7   1    4    0   -77.86413732   -1.14E-06*  2.60E-04    6   9 1 -1.40E-04*  0.19   1.21    QN   YES    0:00:00
+        8   1    4    0   -77.86413749   -1.70E-07*  1.33E-04    6   9 1 -6.84E-05   0.19   1.51    LS   YES    0:00:00
+        9   1    4    0   -77.86413751   -2.20E-08* -7.83E-05    6  14 1  5.11E-05   0.19   1.00    QN   YES    0:00:00
+       10   1    3    0   -77.86413753   -1.95E-08*  3.90E-05    6   9 1 -1.78E-05   0.19   1.40    QN   YES    0:00:00
+       11   1    3    0   -77.86413753   -2.78E-09   1.17E-05    6   9 1 -6.84E-06   0.19   1.16    QN   YES    0:00:00
+      Convergence after 11 iterations
+       12   1    3    0   -77.86413753   -2.82E-10   1.17E-05    6   9 1 -2.69E-06   0.19   1.16    QN   YES    0:00:00
+
+      ************************************************************************************************************************
+                                                      Wave function printout:
+                       occupation of active orbitals, and spin coupling of open shells (u,d: Spin up or down)
+      ************************************************************************************************************************
+
+      Note: transformation to natural orbitals
+      has been made, which may change the order of the CSFs.
+
+      printout of CI-coefficients larger than  0.05 for root  1
+      energy=     -77.880757
+      conf/sym  11     Coeff  Weight
+             2  ud   1.00000 1.00000
+
+      printout of CI-coefficients larger than  0.05 for root  2
+      energy=     -77.847518
+      conf/sym  11     Coeff  Weight
+             1  20   0.99992 0.99985
+
+      Natural orbitals and occupation numbers for root  1
+      sym 1:   1.000189   0.999811
+
+      Natural orbitals and occupation numbers for root  2
+      sym 1:   1.999698   0.000302
+
+      ************************************************************************************************************************
+      *                                                                                                                      *
+      *                                                    Final results                                                     *
+      *                                                                                                                      *
+      ************************************************************************************************************************
+
+
+++    Wave function specifications:
+      -----------------------------
+
+      Number of closed shell electrons          14
+      Number of electrons in active shells       2
+      Max number of holes in RAS1 space          0
+      Max nr of electrons in RAS3 space          0
+      Number of inactive orbitals                7
+      Number of active orbitals                  2
+      Number of secondary orbitals              39
+      Spin quantum number                      0.0
+      State symmetry                             1
+--
+
+++    Orbital specifications:
+      -----------------------
+
+      Symmetry species                           1
+                                                 a
+      Frozen orbitals                            0
+      Inactive orbitals                          7
+      Active orbitals                            2
+      RAS1 orbitals                              0
+      RAS2 orbitals                              2
+      RAS3 orbitals                              0
+      Secondary orbitals                        39
+      Deleted orbitals                           0
+      Number of basis functions                 48
+--
+
+++    CI expansion specifications:
+      ----------------------------
+
+      Number of CSFs                             3
+      Number of determinants                     3
+      Number of root(s) required                 2
+      CI roots used                              1     2
+      weights                                0.500 0.500
+      highest root included in the CI            2
+      Root passed to geometry opt.               2
+--
+
+++    Final optimization conditions:
+      ------------------------------
+
+      Average CI energy                             -77.86413753
+      RASSCF energy for state  2                    -77.84751795
+      Super-CI energy                                -0.00000000
+      RASSCF energy change                           -0.00000000
+      Max change in MO coefficients               1.409E-05
+      Max non-diagonal density matrix element     1.169E-05
+      Maximum BLB matrix element                 -2.692E-06
+      (orbital pair   6,   9 in symmetry   1)
+      Norm of electronic gradient            2.413E-01
+--
+
+
+      Final state energy(ies):
+      ------------------------
+
+::    RASSCF root number  1 Total energy:    -77.88075712
+::    RASSCF root number  2 Total energy:    -77.84751795
+
+++    Molecular orbitals:
+      -------------------
+
+      Pseudonatural active orbitals and approximate occupation numbers
+
+
+
+
+      Molecular orbitals for symmetry species 1: a  
+
+
+      Orbital                 1         2         3         4         5         6         7         8         9
+      Energy           -11.3056  -11.2186   -1.0289   -0.8013   -0.6219   -0.5449   -0.5032   -0.2275   -0.0001
+      Occ. No.           2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    1.4998    0.5002
+
+     1 C1     1s         1.0012   -0.0056   -0.0151    0.0084   -0.0022   -0.0025   -0.0020    0.0042    0.0003
+     2 C1     2s         0.0070   -0.0004    0.6518   -0.4530   -0.0324   -0.1363   -0.1061    0.1099   -0.0241
+     3 C1     *s        -0.0077    0.0028   -0.1510    0.0859    0.0073   -0.0022    0.0024   -0.0516   -0.0256
+     4 C1     2px        0.0003   -0.0000   -0.0020   -0.0117    0.3881   -0.1197    0.1854   -0.0642   -0.6465
+     5 C1     *px       -0.0002    0.0002    0.0069    0.0028   -0.0757    0.0167   -0.0060    0.0247   -0.1686
+     6 C1     2py       -0.0002    0.0000    0.0022    0.0327    0.4830   -0.1485   -0.2209   -0.0660    0.4832
+     7 C1     *py        0.0002    0.0006    0.0084   -0.0060   -0.0949    0.0289    0.0133    0.0188    0.1189
+     8 C1     2pz       -0.0007   -0.0002    0.1445    0.3421   -0.1649   -0.5076   -0.1999    0.1378   -0.1265
+     9 C1     *pz       -0.0001    0.0014   -0.0403   -0.0705    0.0419    0.0773    0.0280   -0.0438   -0.0292
+    10 C1     *d2-       0.0007    0.0000    0.0005   -0.0077    0.0058    0.0036    0.0013   -0.0047    0.0022
+    11 C1     *d1-       0.0001    0.0001    0.0004    0.0004   -0.0131    0.0217   -0.0067    0.0338    0.0011
+    12 C1     *d0        0.0004   -0.0005    0.0176    0.0132   -0.0086   -0.0108   -0.0039    0.0040    0.0003
+    13 C1     *d1+      -0.0001    0.0000   -0.0013    0.0013   -0.0086    0.0057    0.0259    0.0261    0.0048
+    14 C1     *d2+      -0.0002    0.0000    0.0004    0.0024    0.0025   -0.0054    0.0019   -0.0014    0.0030
+    15 C2     1s         0.0053    1.0015   -0.0172   -0.0099   -0.0013   -0.0038   -0.0001    0.0018   -0.0011
+    16 C2     2s        -0.0001    0.0082    0.5276    0.4866   -0.0965    0.0601   -0.0350   -0.3757   -0.0120
+    17 C2     *s         0.0008   -0.0103   -0.1442   -0.1125    0.0172    0.0409    0.0076   -0.1294    0.0220
+    18 C2     2px        0.0001    0.0019    0.0649    0.0859    0.0962   -0.0824    0.4611    0.3982    0.1624
+    19 C2     *px       -0.0003   -0.0022   -0.0252   -0.0308   -0.0205    0.0159   -0.0661    0.0685    0.0203
+    20 C2     2py        0.0001    0.0018    0.0474    0.1048    0.1520    0.2527   -0.2854    0.5452   -0.0979
+    21 C2     *py       -0.0001   -0.0022   -0.0211   -0.0369   -0.0322   -0.0453    0.0426    0.0856   -0.0091
+    22 C2     2pz        0.0001   -0.0012   -0.1712    0.0836    0.1682    0.4876    0.1880   -0.2685    0.0435
+    23 C2     *pz       -0.0009    0.0019    0.0553   -0.0059   -0.0443   -0.1131   -0.0336   -0.0459   -0.0071
+    24 C2     *d2-      -0.0001   -0.0000    0.0006    0.0004    0.0048    0.0005    0.0010    0.0128    0.0048
+    25 C2     *d1-      -0.0000    0.0003   -0.0032    0.0029   -0.0097    0.0175    0.0097   -0.0086   -0.0233
+    26 C2     *d0       -0.0001    0.0001    0.0190   -0.0105   -0.0148   -0.0254   -0.0184    0.0019   -0.0068
+    27 C2     *d1+       0.0001   -0.0000   -0.0056    0.0014   -0.0066    0.0142   -0.0037   -0.0093    0.0305
+    28 C2     *d2+       0.0000    0.0000    0.0012   -0.0000   -0.0008   -0.0141    0.0301   -0.0009    0.0245
+    29 H3     1s        -0.0007   -0.0003    0.2116   -0.3356    0.5792   -0.0147   -0.0108   -0.2425   -0.0143
+    30 H3     *s         0.0014    0.0000   -0.1018    0.1302   -0.1731   -0.0035   -0.0014   -0.0229    0.0059
+    31 H3     *px        0.0004   -0.0000   -0.0107    0.0135   -0.0125   -0.0030    0.0029    0.0010   -0.0143
+    32 H3     *py        0.0004   -0.0001   -0.0123    0.0159   -0.0137   -0.0040   -0.0049    0.0016    0.0114
+    33 H3     *pz       -0.0002   -0.0001    0.0104   -0.0066    0.0129   -0.0081   -0.0029    0.0014   -0.0022
+    34 H4     1s        -0.0006   -0.0001    0.2063   -0.3781   -0.3933    0.3943    0.1473    0.1713    0.0146
+    35 H4     *s         0.0015    0.0006   -0.0923    0.1533    0.1280   -0.0993   -0.0363    0.0021    0.0066
+    36 H4     *px       -0.0003    0.0001    0.0075   -0.0124   -0.0031    0.0062    0.0068   -0.0007   -0.0147
+    37 H4     *py       -0.0004    0.0001    0.0121   -0.0190   -0.0077    0.0113    0.0011   -0.0005    0.0110
+    38 H4     *pz       -0.0003   -0.0000    0.0112   -0.0104   -0.0149    0.0034    0.0003    0.0031   -0.0029
+    39 H5     1s         0.0002    0.0001    0.2116    0.2733    0.0789    0.0286    0.5819    0.1333    0.3400
+    40 H5     *s         0.0005    0.0012   -0.0964   -0.1041   -0.0201    0.0028   -0.1028   -0.0446    0.0607
+    41 H5     *px       -0.0000    0.0006   -0.0172   -0.0176   -0.0024   -0.0029   -0.0183    0.0006   -0.0074
+    42 H5     *py        0.0000   -0.0000    0.0022    0.0040    0.0041    0.0072   -0.0041    0.0145   -0.0032
+    43 H5     *pz       -0.0002    0.0001   -0.0061   -0.0018    0.0003    0.0124   -0.0066   -0.0088    0.0079
+    44 H6     1s         0.0001    0.0001    0.1808    0.3122    0.1304    0.5063   -0.2664    0.1793   -0.2487
+    45 H6     *s         0.0003    0.0014   -0.0808   -0.1189   -0.0419   -0.1152    0.0473   -0.0388   -0.0333
+    46 H6     *px        0.0001   -0.0000    0.0030    0.0050    0.0028    0.0023    0.0103    0.0115    0.0066
+    47 H6     *py       -0.0001    0.0006   -0.0133   -0.0179   -0.0055   -0.0183    0.0069    0.0020    0.0034
+    48 H6     *pz       -0.0001    0.0001   -0.0085   -0.0082    0.0002   -0.0035    0.0106   -0.0105    0.0008
+--
+
+      Von Neumann Entropy (Root   1) =  1.00000
+
+
+      Mulliken population analysis for root number:  1
+      -----------------------------------------------
+
+
+++    Molecular charges:
+      ------------------
+
+      Mulliken charges per centre and basis function type
+      ---------------------------------------------------
+
+                C1      C2      H3      H4      H5      H6    
+      1s       2.0025  2.0031  1.2257  1.2402  1.2145  1.2252
+      2s       1.5400  1.4434  0.0000  0.0000  0.0000  0.0000
+      2px      1.0538  0.9687  0.0000  0.0000  0.0000  0.0000
+      2pz      1.2134  1.0177  0.0000  0.0000  0.0000  0.0000
+      2py      1.1359  0.9367  0.0000  0.0000  0.0000  0.0000
+      *s      -0.3236 -0.2704 -0.3586 -0.3650 -0.2715 -0.3046
+      *px      0.0021 -0.0900  0.0118  0.0094  0.0182  0.0066
+      *pz     -0.1832 -0.1653  0.0085  0.0099  0.0078  0.0069
+      *py     -0.0883 -0.0556  0.0135  0.0143  0.0059  0.0173
+      *d2+     0.0007  0.0195  0.0000  0.0000  0.0000  0.0000
+      *d1+     0.0189  0.0120  0.0000  0.0000  0.0000  0.0000
+      *d0      0.0113  0.0238  0.0000  0.0000  0.0000  0.0000
+      *d1-     0.0209  0.0130  0.0000  0.0000  0.0000  0.0000
+      *d2-     0.0029  0.0004  0.0000  0.0000  0.0000  0.0000
+      Total    6.4073  5.8568  0.9008  0.9088  0.9748  0.9514
+
+      N-E     -0.4073  0.1432  0.0992  0.0912  0.0252  0.0486
+
+      Total electronic charge=   16.000000
+
+      Total            charge=   -0.000000
+--
+
+
+
+      Expectation values of various properties for root number:  1
+      -----------------------------------------------------------
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =   -0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X=  2.8240E-01               Y=  3.1850E-01               Z=  7.4106E-01           Total=  8.5461E-01
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=   -0.0580    0.0187    0.0482
+                  XX= -1.4593E+01              XY=  1.1463E+00              XZ= -1.2547E-01              YY= -1.3931E+01
+                  YZ=  6.7454E-01              ZZ= -1.3957E+01
+      In traceless form (Debye*Ang)
+                  XX= -6.4919E-01              XY=  1.7194E+00              XZ= -1.8820E-01              YY=  3.4361E-01
+                  YZ=  1.0118E+00              ZZ=  3.0558E-01
+--
+
+      Von Neumann Entropy (Root   2) =  0.00213
+
+
+      Mulliken population analysis for root number:  2
+      -----------------------------------------------
+
+
+++    Molecular charges:
+      ------------------
+
+      Mulliken charges per centre and basis function type
+      ---------------------------------------------------
+
+                C1      C2      H3      H4      H5      H6    
+      1s       2.0025  2.0031  1.2618  1.2523  1.1556  1.2073
+      2s       1.5421  1.5685  0.0000  0.0000  0.0000  0.0000
+      2px      0.6166  1.1433  0.0000  0.0000  0.0000  0.0000
+      2pz      1.2074  1.1012  0.0000  0.0000  0.0000  0.0000
+      2py      0.8870  1.2897  0.0000  0.0000  0.0000  0.0000
+      *s      -0.3219 -0.2313 -0.3571 -0.3652 -0.2754 -0.3061
+      *px     -0.0856 -0.0624  0.0086  0.0059  0.0181  0.0078
+      *pz     -0.1830 -0.1534  0.0085  0.0097  0.0077  0.0083
+      *py     -0.1352 -0.0076  0.0115  0.0124  0.0086  0.0175
+      *d2+     0.0007  0.0163  0.0000  0.0000  0.0000  0.0000
+      *d1+     0.0238  0.0038  0.0000  0.0000  0.0000  0.0000
+      *d0      0.0113  0.0236  0.0000  0.0000  0.0000  0.0000
+      *d1-     0.0302  0.0077  0.0000  0.0000  0.0000  0.0000
+      *d2-     0.0032  0.0005  0.0000  0.0000  0.0000  0.0000
+      Total    5.5992  6.7030  0.9333  0.9151  0.9145  0.9349
+
+      N-E      0.4008 -0.7030  0.0667  0.0849  0.0855  0.0651
+
+      Total electronic charge=   16.000000
+
+      Total            charge=   -0.000000
+--
+
+
+
+      Expectation values of various properties for root number:  2
+      -----------------------------------------------------------
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =   -0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X=  1.8481E+00               Y=  1.6559E+00               Z= -4.8946E+00           Total=  5.4876E+00
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=   -0.0580    0.0187    0.0482
+                  XX= -1.3935E+01              XY= -9.0946E-01              XZ=  1.9659E+00              YY= -1.4484E+01
+                  YZ=  2.2918E+00              ZZ= -1.4630E+01
+      In traceless form (Debye*Ang)
+                  XX=  6.2210E-01              XY= -1.3642E+00              XZ=  2.9488E+00              YY= -2.0155E-01
+                  YZ=  3.4378E+00              ZZ= -4.2055E-01
+--
+
+
+      Input file to MOLDEN was generated!
+
+
+      Input file to MOLDEN was generated!
+
+
+      Input file to MOLDEN was generated!
+
+      Average orbitals are written to the RASORB file
+      Natural orbitals for root   1 are written to the RASORB.1 file
+      Natural orbitals for root   2 are written to the RASORB.2 file
+      Spin density orbitals for root   1 are written to the SPDORB.1 file
+      Spin density orbitals for root   2 are written to the SPDORB.2 file
+
+--- Stop Module: rasscf at Tue Jul 16 14:02:16 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:16 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SLAPAF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200175
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+--- Stop Module: slapaf at Tue Jul 16 14:02:16 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:16 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &ALASKA
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200179
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+--- Stop Module: alaska at Tue Jul 16 14:02:16 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:16 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                               &MCLR
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200182
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+ No .RLXPT2  or MCKINT  , I hope that is OK
+ Seward mode is assumed, reading perturbation from ONEINT  
+ OrdInt status: non-squared
+
+++   Wave function specifications:
+     -----------------------------
+
+     Number of closed shell electrons             14
+     Number of electrons in active shells          2
+     Max number of holes in RAS1 space             0
+     Max number of electrons in RAS3 space         0
+     Number of inactive orbitals                   7
+     Number of active orbitals                     2
+     Number of secondary orbitals                 39
+     Spin quantum number                         0.0
+     State symmetry                                1
+     Number of CI roots                            2
+     States considered                             1     2
+     Weights                                   0.500 0.500
+
+     Symmetry species                              1
+     Skipped sym. species                          0
+     Frozen orbitals                               0
+     Inactive orbitals                             7
+     Active orbitals                               2
+     RAS1 orbitals                                 0
+     RAS2 orbitals                                 2
+     RAS3 orbitals                                 0
+     Deleted orbitals                              0
+     Number of basis functions                    48
+     Number of orbitals                           48
+     Number of configurations                      3
+     Number of combinations                        3
+     Natural orbitals are used in the last CI
+     RASSCF state energy =            -77.8807571168
+     Size of explicit Hamiltonian in PCG:        100
+--
+
+     Convergence threshold=               1.0000E-04
+     Max number of iterations in PCG:            200
+     Using the Cho-MO Algorithm
+     Lagrangian multipliers are calculated for state no.   1
+
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.0000000000000002E-002
+  CPU time for the reordering section:    1.0000000000000002E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.03    3.0         0.02
+ Generation              0.02    2.0         0.03
+ TOTAL                   0.07    7.0         0.07
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      3.466240563E-02  7.178514668E-02  5.757319410E-04  2.368414539E-03  1.004345641E-06
+            2      1.072277884E-03  1.454052498E-02  8.231117099E-04  7.114457303E-05  2.153151776E-06
+            3      1.301538866E-04  5.610852344E-03  2.044545520E-04  8.770383234E-06  1.265490796E-07
+            4      1.075822202E-05  1.507915551E-03  5.979406147E-05  7.240635920E-07  1.133644606E-08
+            5      8.067564600E-07  4.664758727E-04  3.000608312E-05  5.233804293E-08  2.809427557E-09
+            6      4.626288778E-08  1.185109644E-04  8.796323081E-07  3.160072971E-09  2.320347025E-12
+      Perturbation no:    1 converged in    6 steps.
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =   -0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X=  5.4244E-01               Y=  5.2958E-01               Z= -4.4000E-01           Total=  8.7653E-01
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=   -0.0580    0.0187    0.0482
+                  XX= -1.4402E+01              XY=  9.5937E-01              XZ= -4.3268E-02              YY= -1.3816E+01
+                  YZ=  7.4084E-01              ZZ= -1.4300E+01
+      In traceless form (Debye*Ang)
+                  XX= -3.4440E-01              XY=  1.4391E+00              XZ= -6.4902E-02              YY=  5.3454E-01
+                  YZ=  1.1113E+00              ZZ= -1.9014E-01
+--
+
+
+      The response parameters are written to the file RESP.
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: RunFile label nBas                                          ###
+ ###    was used       61 times                                              ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+--- Stop Module: mclr at Tue Jul 16 14:02:16 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:16 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &ALASKA
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200187
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+                     Threshold for contributions to the gradient: 1.000E-07
+
+
+                    ********************************************
+                    * Symmetry Adapted Cartesian Displacements *
+                    ********************************************
+
+
+           Irreducible representation : a  
+           Basis function(s) of irrep: x, y, xy, Rz, z, xz, Ry, yz, Rx, I                                              
+
+ Basis Label        Type   Center Phase
+   1   C1           x         1     1
+   2   C1           y         1     1
+   3   C1           z         1     1
+   4   C2           x         2     1
+   5   C2           y         2     1
+   6   C2           z         2     1
+   7   H3           x         3     1
+   8   H3           y         3     1
+   9   H3           z         3     1
+  10   H4           x         4     1
+  11   H4           y         4     1
+  12   H4           z         4     1
+  13   H5           x         5     1
+  14   H5           y         5     1
+  15   H5           z         5     1
+  16   H6           x         6     1
+  17   H6           y         6     1
+  18   H6           z         6     1
+
+                     No automatic utilization of translational and rotational invariance of the energy is employed.
+
+ RI-ERI gradients!
+ IFG                  184               216384
+ A total of 66111. entities were prescreened and 66111. were kept.
+
+ **************************************************
+ *                                                *
+ *              Molecular gradients               *
+ *                                                *
+ **************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1                4.03647860203140E-02    2.28852812025426E-02    5.59139238830793E-02
+  C2               -1.06984742386555E-01   -7.44338560411495E-02    1.45598444046069E-03
+  H3                6.99552011820037E-03    5.32108772184059E-03   -1.61360826452581E-02
+  H4               -5.32249788744910E-03   -8.84132539679383E-03   -4.91941127194595E-03
+  H5                2.83202494053221E-02    3.40728397549116E-02   -3.16680700588983E-02
+  H6                3.66266847301770E-02    2.09959727586431E-02   -4.64634434746825E-03
+ ------------------------------------------------------------------------------------------
+
+--- Stop Module: alaska at Tue Jul 16 14:02:16 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:16 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SLAPAF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200191
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+--- Stop Module: slapaf at Tue Jul 16 14:02:17 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &ALASKA
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200194
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+--- Stop Module: alaska at Tue Jul 16 14:02:17 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                               &MCLR
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200198
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+ No .RLXPT2  or MCKINT  , I hope that is OK
+ Seward mode is assumed, reading perturbation from ONEINT  
+ OrdInt status: non-squared
+
+++   Wave function specifications:
+     -----------------------------
+
+     Number of closed shell electrons             14
+     Number of electrons in active shells          2
+     Max number of holes in RAS1 space             0
+     Max number of electrons in RAS3 space         0
+     Number of inactive orbitals                   7
+     Number of active orbitals                     2
+     Number of secondary orbitals                 39
+     Spin quantum number                         0.0
+     State symmetry                                1
+     Number of CI roots                            2
+     States considered                             1     2
+     Weights                                   0.500 0.500
+
+     Symmetry species                              1
+     Skipped sym. species                          0
+     Frozen orbitals                               0
+     Inactive orbitals                             7
+     Active orbitals                               2
+     RAS1 orbitals                                 0
+     RAS2 orbitals                                 2
+     RAS3 orbitals                                 0
+     Deleted orbitals                              0
+     Number of basis functions                    48
+     Number of orbitals                           48
+     Number of configurations                      3
+     Number of combinations                        3
+     Natural orbitals are used in the last CI
+     RASSCF state energy =            -77.8475179455
+     Size of explicit Hamiltonian in PCG:        100
+--
+
+     Convergence threshold=               1.0000E-04
+     Max number of iterations in PCG:            200
+     Using the Cho-MO Algorithm
+     Lagrangian multipliers are calculated for state no.   2
+
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    9.9999999999999950E-003
+  CPU time for the reordering section:    9.9999999999999950E-003
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.03    3.0         0.03
+ TOTAL                   0.06    6.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      3.466240563E-02  7.178514668E-02  5.757319410E-04  2.368414539E-03  1.004345641E-06
+            2      1.072277884E-03  1.454052498E-02  8.231117099E-04  7.114457303E-05  2.153151776E-06
+            3      1.301538866E-04  5.610852344E-03  2.044545520E-04  8.770383234E-06  1.265490796E-07
+            4      1.075822202E-05  1.507915551E-03  5.979406147E-05  7.240635920E-07  1.133644606E-08
+            5      8.067564600E-07  4.664758727E-04  3.000608312E-05  5.233804293E-08  2.809427557E-09
+            6      4.626288778E-08  1.185109644E-04  8.796323081E-07  3.160072971E-09  2.320347025E-12
+      Perturbation no:    1 converged in    6 steps.
+
+
+++    Molecular properties:
+      ---------------------
+
+      Charge (e):
+                      =   -0.0000
+      Dipole Moment (Debye):
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                   X=  1.5881E+00               Y=  1.4448E+00               Z= -3.7135E+00           Total=  4.2895E+00
+      Quadrupole Moment (Debye*Ang):
+      Origin of the operator (Ang)=   -0.0580    0.0187    0.0482
+                  XX= -1.4126E+01              XY= -7.2258E-01              XZ=  1.8837E+00              YY= -1.4599E+01
+                  YZ=  2.2255E+00              ZZ= -1.4287E+01
+      In traceless form (Debye*Ang)
+                  XX=  3.1732E-01              XY= -1.0839E+00              XZ=  2.8255E+00              YY= -3.9248E-01
+                  YZ=  3.3383E+00              ZZ=  7.5164E-02
+--
+
+
+      The response parameters are written to the file RESP.
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: RunFile label nBas                                          ###
+ ###    was used       61 times                                              ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+--- Stop Module: mclr at Tue Jul 16 14:02:17 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &ALASKA
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200224
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+                     Threshold for contributions to the gradient: 1.000E-07
+
+
+                    ********************************************
+                    * Symmetry Adapted Cartesian Displacements *
+                    ********************************************
+
+
+           Irreducible representation : a  
+           Basis function(s) of irrep: x, y, xy, Rz, z, xz, Ry, yz, Rx, I                                              
+
+ Basis Label        Type   Center Phase
+   1   C1           x         1     1
+   2   C1           y         1     1
+   3   C1           z         1     1
+   4   C2           x         2     1
+   5   C2           y         2     1
+   6   C2           z         2     1
+   7   H3           x         3     1
+   8   H3           y         3     1
+   9   H3           z         3     1
+  10   H4           x         4     1
+  11   H4           y         4     1
+  12   H4           z         4     1
+  13   H5           x         5     1
+  14   H5           y         5     1
+  15   H5           z         5     1
+  16   H6           x         6     1
+  17   H6           y         6     1
+  18   H6           z         6     1
+
+                     No automatic utilization of translational and rotational invariance of the energy is employed.
+
+ RI-ERI gradients!
+ IFG                  184               216384
+ A total of 66111. entities were prescreened and 66111. were kept.
+
+ **************************************************
+ *                                                *
+ *              Molecular gradients               *
+ *                                                *
+ **************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -2.45386856980406E-03   -4.62197961905519E-03   -4.40489258072780E-02
+  C2                4.66574318212309E-03    2.17434152949281E-05    2.24332333910979E-02
+  H3                6.13149164783655E-03    7.44956947872577E-04    3.81016368442100E-03
+  H4               -7.48054472086568E-03   -2.15305080120443E-03   -8.51216881404548E-04
+  H5                4.33961451924647E-03    3.51427244772744E-03    8.22676141449674E-03
+  H6               -5.20243605854084E-03    2.49405760935195E-03    1.04299841986824E-02
+ ------------------------------------------------------------------------------------------
+
+--- Stop Module: alaska at Tue Jul 16 14:02:17 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SLAPAF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200229
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+--- Stop Module: slapaf at Tue Jul 16 14:02:17 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &ALASKA
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200232
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+--- Stop Module: alaska at Tue Jul 16 14:02:17 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                               &MCLR
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200235
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+ No .RLXPT2  or MCKINT  , I hope that is OK
+ Seward mode is assumed, reading perturbation from ONEINT  
+ OrdInt status: non-squared
+
+++   Wave function specifications:
+     -----------------------------
+
+     Number of closed shell electrons             14
+     Number of electrons in active shells          2
+     Max number of holes in RAS1 space             0
+     Max number of electrons in RAS3 space         0
+     Number of inactive orbitals                   7
+     Number of active orbitals                     2
+     Number of secondary orbitals                 39
+     Spin quantum number                         0.0
+     State symmetry                                1
+     Number of CI roots                            2
+     States considered                             1     2
+     Weights                                   0.500 0.500
+
+     Symmetry species                              1
+     Skipped sym. species                          0
+     Frozen orbitals                               0
+     Inactive orbitals                             7
+     Active orbitals                               2
+     RAS1 orbitals                                 0
+     RAS2 orbitals                                 2
+     RAS3 orbitals                                 0
+     Deleted orbitals                              0
+     Number of basis functions                    48
+     Number of orbitals                           48
+     Number of configurations                      3
+     Number of combinations                        3
+     Natural orbitals are used in the last CI
+     RASSCF state energy =            -77.8807571168
+     Size of explicit Hamiltonian in PCG:        100
+--
+
+     Convergence threshold=               1.0000E-04
+     Max number of iterations in PCG:            200
+     Using the Cho-MO Algorithm
+     Lagrangian multipliers are calculated for states no.   2/  1
+
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.05    5.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.419466499E-01  2.517990673E-02  2.555146208E-02  3.328867354E-04  1.900548662E-03
+            2      1.149076186E-02  2.198145543E-02  1.598511945E-03  1.733604860E-04  7.438950245E-06
+            3      6.553405615E-04  5.981060427E-03  7.440451596E-05  1.029522631E-05  1.611819080E-08
+            4      2.780423177E-05  1.183977659E-03  1.004218613E-04  4.081243035E-07  2.935664788E-08
+            5      2.099437362E-06  3.321481632E-04  5.538011329E-06  3.293775910E-08  9.548067181E-11
+      Perturbation no:    1 converged in    5 steps.
+
+
+      The response parameters are written to the file RESP.
+--- Stop Module: mclr at Tue Jul 16 14:02:17 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:17 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &ALASKA
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200239
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+                     Threshold for contributions to the gradient: 1.000E-07
+
+
+                    ********************************************
+                    * Symmetry Adapted Cartesian Displacements *
+                    ********************************************
+
+
+           Irreducible representation : a  
+           Basis function(s) of irrep: x, y, xy, Rz, z, xz, Ry, yz, Rx, I                                              
+
+ Basis Label        Type   Center Phase
+   1   C1           x         1     1
+   2   C1           y         1     1
+   3   C1           z         1     1
+   4   C2           x         2     1
+   5   C2           y         2     1
+   6   C2           z         2     1
+   7   H3           x         3     1
+   8   H3           y         3     1
+   9   H3           z         3     1
+  10   H4           x         4     1
+  11   H4           y         4     1
+  12   H4           z         4     1
+  13   H5           x         5     1
+  14   H5           y         5     1
+  15   H5           z         5     1
+  16   H6           x         6     1
+  17   H6           y         6     1
+  18   H6           z         6     1
+
+                     No automatic utilization of translational and rotational invariance of the energy is employed.
+
+ Skipping Nuclear Charge Contribution
+ RI-ERI gradients!
+ IFG                  184               216384
+ A total of 66111. entities were prescreened and 66111. were kept.
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1                5.65842407474673E-03    9.42806495573696E-03    1.30459849659471E-03
+  C2               -4.63185436086867E-03    6.51398935579318E-03    4.66049085679883E-03
+  H3               -2.51643076465385E-02    1.95953946078938E-02   -4.24365523838632E-03
+  H4                1.84274485463037E-02   -1.38078085805489E-02    3.36651907224495E-03
+  H5               -8.42889149351855E-03   -3.58575874880880E-02    1.22096766005768E-02
+  H6                1.41391808798719E-02    1.41279471492126E-02   -1.72976297878285E-02
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  3.323917E-02
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1                1.70233608787858E-01    2.83643201728969E-01    3.92488274404342E-02
+  C2               -1.39349273369148E-01    1.95973278247443E-01    1.40210801946864E-01
+  H3               -7.57067841987418E-01    5.89527171463058E-01   -1.27670308223467E-01
+  H4                5.54389530609768E-01   -4.15407727146008E-01    1.01281678988873E-01
+  H5               -2.53583082156523E-01   -1.07877501577978E+00    3.67327948982314E-01
+  H6                4.25377058115359E-01    4.25039091486306E-01   -5.20398949135004E-01
+ ------------------------------------------------------------------------------------------
+
+               norm:       1.9003
+--- Stop Module: alaska at Tue Jul 16 14:02:18 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:18 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SLAPAF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 200271
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+
+
+++       Slapaf input parameters:
+         ------------------------
+
+ Maximum number of iterations:              2000
+ Convergence test a la Schlegel.
+ Convergence criterion on gradient/para.<=: 3.0E-04
+ Convergence criterion on step/parameter<=: 3.0E-04
+ Convergence criterion on energy change <=: 0.0E+00
+ Parameters for step-restricted optimization
+ Maximum step length (micro iterations):   3.00E-01
+
+ -RVO activated with parameters:
+   Maximum number of sample points (energies) used in GEK:     10
+   Maximum number of sample points (gradients) used in GEK:     10
+   Maximum number of micro iterations:            50
+   Individual characteristic length scales set to reproduce HMF Hessian.
+   Baseline is highest energy plus:   10.00000 a.u
+   Maximum dispersion accepted:        0.30000 * abs(g.max.comp)
+ -Constrained optimization.
+
+ -Optimization for minimum.
+  Optimization method: RVO.
+
+ -Hessian guessed by Kriging surrogate surface.
+
+ -Relaxation will be done on non-redundant internal coordinates, based on
+  force constant weighted redundant internal coordinates.
+
+--
+
+ ******************************************
+ * Statistics of the internal coordinates *
+ ******************************************
+ Translations and Rotations:         0
+ Bonds                     :         5
+ Angles                    :         6
+ Torsions                  :         4
+ Out-of-plane angles       :         2
+
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.03323917 hartree,        87.26943213 kJ/mol
+           Average energy    =       -77.86413753 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.033239  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 1.1204E-01  1.2000E-03     No    + 7.9004E-03  3.0000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 1.5118E-01  1.8000E-03     No    + 1.6649E-02  4.5000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+
+ Convergence not reached yet!
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the new structure
+********************************************************************************
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.064798        0.034332       -1.126892
+  C2              -0.434154       -0.148058        1.492270
+  H3               1.147913        1.374886       -2.166480
+  H4              -0.862478       -1.380025       -2.414264
+  H5               1.763626       -0.082704        1.671941
+  H6              -0.359166        1.819281        2.259275
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.034290        0.018167       -0.596325
+  C2              -0.229744       -0.078349        0.789676
+  H3               0.607450        0.727558       -1.146452
+  H4              -0.456404       -0.730278       -1.277574
+  H5               0.933271       -0.043765        0.884753
+  H6              -0.190062        0.962722        1.195557
+
+
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5    
+    1 C1       0.000000
+    2 C2       2.651358        0.000000
+    3 H3       2.085306        4.267171        0.000000
+    4 H4       2.072203        4.118521        3.419445        0.000000
+    5 H5       3.345189        2.206080        4.151764        5.027577        0.000000
+    6 H6       3.839117        2.112899        4.696390        5.686022        2.910113
+
+               6 H6    
+    6 H6       0.000000
+
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5    
+    1 C1       0.000000
+    2 C2       1.403038        0.000000
+    3 H3       1.103496        2.258090        0.000000
+    4 H4       1.096563        2.179428        1.809492        0.000000
+    5 H5       1.770198        1.167407        2.197019        2.660479        0.000000
+    6 H6       2.031573        1.118098        2.485223        3.008913        1.539965
+
+               6 H6    
+    6 H6       0.000000
+
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 C2       1 C1       3 H3       128.15
+                      2 C2       1 C1       4 H4       120.87
+                      3 H3       1 C1       4 H4       110.67
+                      1 C1       2 C2       5 H5        86.54
+                      1 C1       2 C2       6 H6       106.83
+                      5 H5       2 C2       6 H6        84.69
+                      2 C2       5 H5       6 H6        46.30
+                      2 C2       6 H6       5 H5        49.01
+
+           ***************************************************************
+           *              Valence Dihedral Angles / Degree               *
+           ***************************************************************
+                    Atom centers                       Phi1     Phi2     Theta 
+           3 H3       1 C1       2 C2       5 H5        128.15    86.54   -48.46
+           3 H3       1 C1       2 C2       6 H6        128.15   106.83    34.93
+           4 H4       1 C1       2 C2       5 H5        120.87    86.54   124.50
+           4 H4       1 C1       2 C2       6 H6        120.87   106.83  -152.11
+           1 C1       2 C2       5 H5       6 H6         86.54    46.30   107.28
+           1 C1       2 C2       6 H6       5 H5        106.83    49.01   -84.75
+--
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: RunFile label K                                             ###
+ ###    was used       43 times                                              ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+--- Stop Module: slapaf at Tue Jul 16 14:02:18 2024 /rc=_RC_CONTINUE_LOOP_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: seward at Tue Jul 16 14:02:18 2024 ---
+--- Stop Module: seward at Tue Jul 16 14:02:18 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+(Skipped)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:18 2024 ---
+--- Stop Module: rasscf at Tue Jul 16 14:02:19 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:19 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:19 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:19 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:19 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:19 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.04    4.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      4.197479347E-02  7.555967524E-02  4.112325261E-03  2.594012395E-03  4.689741968E-05
+            2      2.062422754E-03  1.627777755E-02  3.303535819E-03  9.952594957E-05  3.023460534E-05
+            3      3.315308080E-04  7.296261030E-03  1.566226970E-04  2.079080670E-05  6.797287294E-08
+            4      2.435986801E-05  2.061438270E-03  3.034818176E-04  1.277363808E-06  2.552754065E-07
+            5      2.139443013E-06  6.717776136E-04  8.358000367E-05  1.152427820E-07  1.936362303E-08
+            6      1.690325554E-07  2.098376507E-04  5.011566652E-06  1.056544538E-08  6.950234726E-11
+--- Stop Module: mclr at Tue Jul 16 14:02:20 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:20 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:20 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:20 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:20 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:20 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:20 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:20 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.01    1.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.03    3.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      4.197479347E-02  7.555967524E-02  4.112325261E-03  2.594012395E-03  4.689741968E-05
+            2      2.062422754E-03  1.627777755E-02  3.303535819E-03  9.952594957E-05  3.023460534E-05
+            3      3.315308080E-04  7.296261030E-03  1.566226970E-04  2.079080670E-05  6.797287294E-08
+            4      2.435986801E-05  2.061438270E-03  3.034818176E-04  1.277363808E-06  2.552754065E-07
+            5      2.139443013E-06  6.717776136E-04  8.358000367E-05  1.152427820E-07  1.936362303E-08
+            6      1.690325554E-07  2.098376507E-04  5.011566652E-06  1.056544538E-08  6.950234726E-11
+--- Stop Module: mclr at Tue Jul 16 14:02:20 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:20 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:21 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:21 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:21 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:21 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:21 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:21 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    9.9999999999999950E-003
+  CPU time for the reordering section:    9.9999999999999950E-003
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.05    5.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.476851588E-01  6.102472753E-02  2.395481924E-02  1.411909137E-03  1.591212668E-03
+            2      1.498146486E-02  2.604823279E-02  5.489234573E-03  2.210795831E-04  8.356283438E-05
+            3      2.346891003E-03  1.078921744E-02  7.459543916E-04  4.618018169E-05  1.542958545E-06
+            4      6.892185633E-05  2.129803353E-03  1.667744871E-04  1.324473335E-06  7.702652574E-08
+            5      4.734745743E-06  5.829898995E-04  2.704256790E-05  9.425735655E-08  2.021906017E-09
+            6      1.632843345E-07  1.134701284E-04  2.637428818E-06  3.301115104E-09  1.921003458E-11
+--- Stop Module: mclr at Tue Jul 16 14:02:21 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:21 2024 ---
+ Skipping Nuclear Charge Contribution
+ IFG                  184               216384
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1                8.96282353748934E-03    1.59799935827106E-02    1.67005749020138E-02
+  C2               -1.48889765552101E-02   -4.17774142107287E-03    2.73328801594044E-03
+  H3               -2.41348999342675E-02    1.96153350089111E-02   -6.93921312315141E-03
+  H4                1.85186660659800E-02   -1.41253053492294E-02    3.38743040222325E-03
+  H5               -4.41524207678218E-03   -3.20121497509996E-02    5.18110169820370E-03
+  H6                1.59576289627907E-02    1.47198679296818E-02   -2.10631818952292E-02
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  2.293489E-03
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1                3.90794340585318E+00    6.96754881828492E+00    7.28173452141446E+00
+  C2               -6.49184684998660E+00   -1.82156626977560E+00    1.19176003337717E+00
+  H3               -1.05232265986872E+01    8.55261947097845E+00   -3.02561486935463E+00
+  H4                8.07445317148528E+00   -6.15887322385535E+00    1.47697723242950E+00
+  H5               -1.92512059252700E+00   -1.39578414105034E+01    2.25904840498752E+00
+  H6                6.95779746386239E+00    6.41811261487176E+00   -9.18390532285373E+00
+ ------------------------------------------------------------------------------------------
+
+               norm:      28.9768
+--- Stop Module: alaska at Tue Jul 16 14:02:21 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:21 2024 ---
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.00229349 hartree,         6.02155342 kJ/mol
+           Average energy    =       -77.85089017 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.002293  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+  2    -77.85089017  0.01324736 0.022360  0.011295 nrc006   0.078714  nrc009      -77.85328970 RVO  3  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 7.5633E-02  1.2000E-03     No    + 6.4548E-03  3.0000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 1.3945E-01  1.8000E-03     No    + 1.1295E-02  4.5000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+
+ Convergence not reached yet!
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the new structure
+********************************************************************************
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.065958        0.023915       -1.107873
+  C2              -0.432191       -0.087772        1.482109
+  H3               1.157842        1.376011       -2.107040
+  H4              -0.835450       -1.402819       -2.392968
+  H5               1.781004       -0.144415        1.548132
+  H6              -0.414303        1.852792        2.293490
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.034904        0.012655       -0.586261
+  C2              -0.228706       -0.046447        0.784298
+  H3               0.612704        0.728154       -1.114997
+  H4              -0.442101       -0.742340       -1.266304
+  H5               0.942467       -0.076421        0.819236
+  H6              -0.219240        0.980456        1.213663
+
+--
+--- Stop Module: slapaf at Tue Jul 16 14:02:21 2024 /rc=_RC_CONTINUE_LOOP_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: seward at Tue Jul 16 14:02:21 2024 ---
+--- Stop Module: seward at Tue Jul 16 14:02:22 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+(Skipped)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:22 2024 ---
+--- Stop Module: rasscf at Tue Jul 16 14:02:22 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:22 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:22 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:22 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:22 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:22 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.9999999999999997E-002
+  CPU time for the reordering section:    1.9999999999999997E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.03
+ TOTAL                   0.06    6.0         0.07
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      6.200294466E-02  6.873410654E-02  1.244658412E-02  2.254756757E-03  4.426972970E-04
+            2      3.630583952E-03  1.674681200E-02  4.998145193E-03  8.660400481E-05  7.134548374E-05
+            3      5.812957391E-04  7.825473728E-03  1.340107467E-04  2.523809131E-05  5.132931631E-08
+            4      3.667346672E-05  2.227391356E-03  2.646774841E-04  1.395242014E-06  2.002465876E-07
+            5      2.295393324E-06  6.022229699E-04  4.819752542E-05  9.322250761E-08  6.639169285E-09
+            6      1.667910979E-07  1.697342467E-04  1.103286249E-05  6.908372668E-09  3.479169425E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:23 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:23 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:23 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:23 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:23 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:23 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:23 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:23 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.0000000000000002E-002
+  CPU time for the reordering section:    1.0000000000000002E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.05    5.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      6.200294466E-02  6.873410654E-02  1.244658412E-02  2.254756757E-03  4.426972970E-04
+            2      3.630583952E-03  1.674681200E-02  4.998145193E-03  8.660400481E-05  7.134548374E-05
+            3      5.812957391E-04  7.825473728E-03  1.340107467E-04  2.523809131E-05  5.132931631E-08
+            4      3.667346672E-05  2.227391356E-03  2.646774841E-04  1.395242014E-06  2.002465876E-07
+            5      2.295393324E-06  6.022229699E-04  4.819752542E-05  9.322250761E-08  6.639169285E-09
+            6      1.667910979E-07  1.697342467E-04  1.103286249E-05  6.908372668E-09  3.479169425E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:23 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:23 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:24 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:24 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:24 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:24 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:24 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:24 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.01    1.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.04    4.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      7.776093665E-02  7.229947430E-02  1.415793835E-02  2.241060608E-03  5.727632766E-04
+            2      7.332597493E-03  1.968761876E-02  6.347739061E-03  1.501666745E-04  1.151675517E-04
+            3      1.169331074E-03  9.352789580E-03  5.820336139E-04  4.134482331E-05  9.680891577E-07
+            4      3.978725873E-05  2.155718463E-03  2.414852363E-04  1.273448245E-06  1.662764257E-07
+            5      2.655926812E-06  6.138763750E-04  3.109365843E-05  9.335163306E-08  2.754594848E-09
+            6      1.089810152E-07  1.284244941E-04  3.297375268E-06  3.912581069E-09  3.095917969E-11
+--- Stop Module: mclr at Tue Jul 16 14:02:24 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:24 2024 ---
+ Skipping Nuclear Charge Contribution
+ IFG                  184               216384
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -1.62923905898525E-02    4.39485119156607E-03   -3.66836090147827E-02
+  C2                4.25910350562418E-02    2.55522670519008E-02    1.09324361510270E-02
+  H3               -1.87293947006898E-02    1.26420797164193E-02    2.28277412865459E-03
+  H4                1.36516129451399E-02   -7.81189458047979E-03    4.75017112674983E-03
+  H5               -1.25411645234527E-02   -3.97153526648616E-02    2.72293766202465E-02
+  H6               -8.67969818738669E-03    4.93804928545563E-03   -8.51114901189747E-03
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  1.457129E-03
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -1.11811567316270E+01    3.01610249975739E+00   -2.51752607828760E+01
+  C2                2.92294145355603E+01    1.75360332285207E+01    7.50272229167348E+00
+  H3               -1.28536261441798E+01    8.67601804311310E+00    1.56662431916453E+00
+  H4                9.36884143166738E+00   -5.36115416541109E+00    3.25995179021300E+00
+  H5               -8.60676187208415E+00   -2.72558885909743E+01    1.86870015186784E+01
+  H6               -5.95671121933666E+00    3.38888898499444E+00   -5.84103913685508E+00
+ ------------------------------------------------------------------------------------------
+
+               norm:      60.0284
+--- Stop Module: alaska at Tue Jul 16 14:02:24 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:24 2024 ---
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.00145713 hartree,         3.82569234 kJ/mol
+           Average energy    =       -77.85355618 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.001457  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+  2    -77.85089017  0.01324736 0.022360  0.011295 nrc006   0.078714  nrc009      -77.85328970 RVO  3  None      0    
+  3    -77.85355618 -0.00266601 0.012557  0.009445 nrc010  -0.113471  nrc012      -77.85529103 RVO  5  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 1.0566E-01  1.2000E-03     No    + 3.6250E-03  3.0000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 1.6185E-01  1.8000E-03     No    + 9.4447E-03  4.5000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+
+ Convergence not reached yet!
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the new structure
+********************************************************************************
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.070817        0.037352       -1.126219
+  C2              -0.455984        0.024152        1.461274
+  H3               1.180377        1.353272       -2.130662
+  H4              -0.774585       -1.458123       -2.366593
+  H5               1.745128       -0.177017        1.424419
+  H6              -0.433176        1.838077        2.453632
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.037475        0.019766       -0.595970
+  C2              -0.241296        0.012780        0.773273
+  H3               0.624629        0.716121       -1.127498
+  H4              -0.409893       -0.771606       -1.252347
+  H5               0.923482       -0.093673        0.753770
+  H6              -0.229227        0.972668        1.298406
+
+--
+--- Stop Module: slapaf at Tue Jul 16 14:02:24 2024 /rc=_RC_CONTINUE_LOOP_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: seward at Tue Jul 16 14:02:24 2024 ---
+--- Stop Module: seward at Tue Jul 16 14:02:25 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+(Skipped)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:25 2024 ---
+--- Stop Module: rasscf at Tue Jul 16 14:02:26 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:26 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:26 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:26 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:26 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:26 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.03    3.0         0.03
+ TOTAL                   0.06    6.0         0.07
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.422475765E-01  4.073220920E-02  2.377412623E-02  6.743817065E-04  1.679991973E-03
+            2      1.256041006E-02  2.421894710E-02  2.983096814E-03  1.814275473E-04  2.646280541E-05
+            3      2.036970833E-03  9.970843929E-03  3.727482329E-04  3.330136556E-05  4.130261515E-07
+            4      6.160487525E-05  1.864764575E-03  1.398928394E-04  9.615038265E-07  5.813320598E-08
+            5      3.602808300E-06  4.627413058E-04  1.776216219E-05  5.869474765E-08  9.361946966E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:26 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:26 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:26 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:26 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:26 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:26 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:26 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:26 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.03    3.0         0.02
+ Generation              0.01    1.0         0.03
+ TOTAL                   0.04    4.0         0.07
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.422475765E-01  4.073220920E-02  2.377412623E-02  6.743817065E-04  1.679991973E-03
+            2      1.256041006E-02  2.421894710E-02  2.983096814E-03  1.814275473E-04  2.646280541E-05
+            3      2.036970833E-03  9.970843929E-03  3.727482329E-04  3.330136556E-05  4.130261515E-07
+            4      6.160487525E-05  1.864764575E-03  1.398928394E-04  9.615038265E-07  5.813320598E-08
+            5      3.602808300E-06  4.627413058E-04  1.776216219E-05  5.869474765E-08  9.361946966E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:27 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:27 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:27 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:27 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:27 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:27 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:27 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:27 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.0000000000000009E-002
+  CPU time for the reordering section:    1.0000000000000009E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.03    3.0         0.03
+ TOTAL                   0.06    6.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      4.052818554E-02  7.463363263E-02  1.316986122E-03  2.444893621E-03  5.160310345E-06
+            2      1.699679610E-03  1.644211955E-02  1.844106357E-03  9.265899240E-05  1.009188716E-05
+            3      2.265593005E-04  6.436168615E-03  1.925938826E-04  1.358573270E-05  1.104764328E-07
+            4      1.763676868E-05  1.716485124E-03  2.131491274E-04  9.308881733E-07  1.353089401E-07
+            5      1.479973715E-06  5.667550035E-04  6.065938379E-05  7.850930003E-08  1.095967991E-08
+            6      9.850381670E-08  1.561421116E-04  8.391995936E-06  5.745620042E-09  2.092397706E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:27 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:27 2024 ---
+ Skipping Nuclear Charge Contribution
+ IFG                  184               216384
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -3.26498912042909E-02   -8.41663000568176E-03   -6.20094781535669E-02
+  C2                6.79207073040774E-02    2.59396175300731E-02    8.21696978719116E-03
+  H3               -2.12720222397414E-03   -1.46262630015627E-03    9.51442358954771E-03
+  H4               -2.10124198527555E-04    3.28814985608051E-03    2.14091893784057E-03
+  H5               -1.17302531011652E-02   -1.48339567108503E-02    3.70088115037459E-02
+  H6               -2.12032365761192E-02   -4.51455436946482E-03    5.12835433524375E-03
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  1.347250E-03
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -2.42344776259825E+01   -6.24726833797417E+00   -4.60267172563802E+01
+  C2                5.04143444522489E+01    1.92537572859197E+01    6.09906995447777E+00
+  H3               -1.57892209748211E+00   -1.08563866643612E+00    7.06210884937686E+00
+  H4               -1.55965303407330E-01    2.44063888664928E+00    1.58910336862994E+00
+  H5               -8.70681481137495E+00   -1.10105479299928E+01    2.74698990186486E+01
+  H6               -1.57381646140017E+01   -3.35094123816555E+00    3.80653606524857E+00
+ ------------------------------------------------------------------------------------------
+
+               norm:      83.5548
+--- Stop Module: alaska at Tue Jul 16 14:02:28 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:28 2024 ---
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.00134725 hartree,         3.53720344 kJ/mol
+           Average energy    =       -77.85544709 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.001347  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+  2    -77.85089017  0.01324736 0.022360  0.011295 nrc006   0.078714  nrc009      -77.85328970 RVO  3  None      0    
+  3    -77.85355618 -0.00266601 0.012557  0.009445 nrc010  -0.113471  nrc012      -77.85529103 RVO  5  None      0    
+  4    -77.85544709 -0.00189091 0.009025  0.005363 nrc010   0.049387  nrc009      -77.85584737 RVO  3  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 4.5612E-02  1.2000E-03     No    + 2.6053E-03  3.0000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 6.7137E-02  1.8000E-03     No    + 5.3630E-03  4.5000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+
+ Convergence not reached yet!
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the new structure
+********************************************************************************
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.057096        0.057166       -1.136405
+  C2              -0.458741        0.055185        1.461200
+  H3               1.198812        1.351767       -2.168415
+  H4              -0.764316       -1.473441       -2.330281
+  H5               1.740487       -0.205616        1.379095
+  H6              -0.468202        1.832651        2.510656
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.030214        0.030251       -0.601359
+  C2              -0.242755        0.029203        0.773234
+  H3               0.634384        0.715324       -1.147476
+  H4              -0.404459       -0.779711       -1.233132
+  H5               0.921026       -0.108807        0.729786
+  H6              -0.247762        0.969797        1.328582
+
+--
+--- Stop Module: slapaf at Tue Jul 16 14:02:28 2024 /rc=_RC_CONTINUE_LOOP_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: seward at Tue Jul 16 14:02:28 2024 ---
+--- Stop Module: seward at Tue Jul 16 14:02:28 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+(Skipped)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:28 2024 ---
+--- Stop Module: rasscf at Tue Jul 16 14:02:29 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:29 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:29 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:29 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:29 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:29 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.05    5.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.267318574E-01  6.287642676E-02  2.051673335E-02  1.328295257E-03  1.263653067E-03
+            2      1.278085919E-02  2.348615913E-02  4.737115043E-03  1.940305344E-04  6.736645952E-05
+            3      2.082476755E-03  1.012716469E-02  6.726416182E-04  4.123300950E-05  1.358271394E-06
+            4      5.630320676E-05  1.932028233E-03  1.947305928E-04  1.037694265E-06  1.138315272E-07
+            5      3.757306556E-06  5.356705925E-04  1.368519918E-05  7.628307013E-08  5.622048928E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:29 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:29 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:30 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:30 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:30 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:30 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:30 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:30 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    9.9999999999999950E-003
+  CPU time for the reordering section:    9.9999999999999950E-003
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.03
+ TOTAL                   0.06    6.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.267318574E-01  6.287642676E-02  2.051673335E-02  1.328295257E-03  1.263653067E-03
+            2      1.278085919E-02  2.348615913E-02  4.737115043E-03  1.940305344E-04  6.736645952E-05
+            3      2.082476755E-03  1.012716469E-02  6.726416182E-04  4.123300950E-05  1.358271394E-06
+            4      5.630320676E-05  1.932028233E-03  1.947305928E-04  1.037694265E-06  1.138315272E-07
+            5      3.757306556E-06  5.356705925E-04  1.368519918E-05  7.628307013E-08  5.622048928E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:30 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:30 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:30 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:30 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:30 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:30 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:30 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:30 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.9999999999999990E-002
+  CPU time for the reordering section:    1.9999999999999990E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.03
+ Generation              0.03    3.0         0.02
+ TOTAL                   0.08    8.0         0.07
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      4.404504345E-02  7.257172536E-02  6.210227958E-03  2.381802148E-03  1.157789225E-04
+            2      1.784609558E-03  1.609520178E-02  2.505459330E-03  8.235275462E-05  1.884380918E-05
+            3      2.314614238E-04  6.693302833E-03  3.781754062E-04  1.269572672E-05  4.293294797E-07
+            4      2.136756351E-05  1.833142211E-03  2.191521604E-04  1.067462034E-06  1.441889930E-07
+            5      1.596819816E-06  5.733449839E-04  5.330922753E-05  8.201594118E-08  8.531975947E-09
+            6      1.168210568E-07  1.659160732E-04  4.530912285E-06  6.562730014E-09  6.162626379E-11
+--- Stop Module: mclr at Tue Jul 16 14:02:31 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:31 2024 ---
+ Skipping Nuclear Charge Contribution
+ IFG                  184               216384
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -3.51293593984234E-02   -1.61580401305453E-02   -6.08921291028666E-02
+  C2                6.56172034403315E-02    2.16030913955574E-02    2.84988619676479E-03
+  H3                8.68903712961734E-03   -9.67534076275202E-03    1.24368398427426E-02
+  H4               -9.32403151470901E-03    9.10427925378504E-03   -1.21425659280305E-03
+  H5               -7.86673624589734E-03    6.19910265717019E-03    3.46549433931854E-02
+  H6               -2.19861134109202E-02   -1.10730924132149E-02    1.21647162629768E-02
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  4.264776E-05
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -8.23709422060508E+02   -3.78871978467085E+02   -1.42779206140625E+03
+  C2                1.53858509374037E+03    5.06546951976401E+02    6.68238234990617E+01
+  H3                2.03739603421878E+02   -2.26866344402586E+02    2.91617676341243E+02
+  H4               -2.18628883127303E+02    2.13476155866062E+02   -2.84717573396984E+01
+  H5               -1.84458381182475E+02    1.45355889047626E+02    8.12585366849061E+02
+  H6               -5.15528010791984E+02   -2.59640674020410E+02    2.85236952056587E+02
+ ------------------------------------------------------------------------------------------
+
+               norm:    2625.0946
+--- Stop Module: alaska at Tue Jul 16 14:02:31 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:31 2024 ---
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.00004265 hartree,         0.11197167 kJ/mol
+           Average energy    =       -77.85585274 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.000043  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+  2    -77.85089017  0.01324736 0.022360  0.011295 nrc006   0.078714  nrc009      -77.85328970 RVO  3  None      0    
+  3    -77.85355618 -0.00266601 0.012557  0.009445 nrc010  -0.113471  nrc012      -77.85529103 RVO  5  None      0    
+  4    -77.85544709 -0.00189091 0.009025  0.005363 nrc010   0.049387  nrc009      -77.85584737 RVO  3  None      0    
+  5    -77.85585274 -0.00040564 0.002111  0.001191 nrc007  -0.009624  nrc011      -77.85585369 RVO  2  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 5.6058E-03  1.2000E-03     No    + 6.0949E-04  3.0000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 6.9870E-03  1.8000E-03     No    + 1.1913E-03  4.5000E-04     No    +
+ +-----+----------------------------------+----------------------------------+
+
+ Convergence not reached yet!
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the new structure
+********************************************************************************
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.060688        0.056396       -1.139116
+  C2              -0.461348        0.058978        1.459398
+  H3               1.199444        1.352219       -2.163412
+  H4              -0.760627       -1.478099       -2.331426
+  H5               1.740199       -0.206861        1.373567
+  H6              -0.466036        1.835079        2.516839
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.032115        0.029843       -0.602794
+  C2              -0.244135        0.031210        0.772280
+  H3               0.634719        0.715563       -1.144828
+  H4              -0.402506       -0.782176       -1.233737
+  H5               0.920873       -0.109466        0.726860
+  H6              -0.246616        0.971082        1.331854
+
+--
+--- Stop Module: slapaf at Tue Jul 16 14:02:31 2024 /rc=_RC_CONTINUE_LOOP_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: seward at Tue Jul 16 14:02:31 2024 ---
+--- Stop Module: seward at Tue Jul 16 14:02:32 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+(Skipped)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:32 2024 ---
+--- Stop Module: rasscf at Tue Jul 16 14:02:32 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:32 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:32 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:32 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:32 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:32 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.0000000000000009E-002
+  CPU time for the reordering section:    1.0000000000000009E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.06    6.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      8.296046388E-02  6.759502219E-02  1.522197279E-02  2.050181362E-03  6.963851186E-04
+            2      6.033309040E-03  1.867506593E-02  5.517856520E-03  1.082385316E-04  9.150582373E-05
+            3      9.920662634E-04  8.694261356E-03  4.538697279E-04  3.222515770E-05  6.191131483E-07
+            4      4.564991966E-05  2.207979772E-03  2.387398284E-04  1.340028937E-06  1.712998739E-07
+            5      2.272093947E-06  5.277802404E-04  3.631410072E-05  7.125875164E-08  3.963309369E-09
+            6      1.528594664E-07  1.453085286E-04  6.771884390E-06  4.922883470E-09  1.378245708E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:33 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:33 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:33 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:33 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:33 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:33 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:33 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:33 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    1.0000000000000002E-002
+  CPU time for the reordering section:    1.0000000000000002E-002
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.03
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.05    5.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      8.296046388E-02  6.759502219E-02  1.522197279E-02  2.050181362E-03  6.963851186E-04
+            2      6.033309040E-03  1.867506593E-02  5.517856520E-03  1.082385316E-04  9.150582373E-05
+            3      9.920662634E-04  8.694261356E-03  4.538697279E-04  3.222515770E-05  6.191131483E-07
+            4      4.564991966E-05  2.207979772E-03  2.387398284E-04  1.340028937E-06  1.712998739E-07
+            5      2.272093947E-06  5.277802404E-04  3.631410072E-05  7.125875164E-08  3.963309369E-09
+            6      1.528594664E-07  1.453085286E-04  6.771884390E-06  4.922883470E-09  1.378245708E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:33 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:33 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:34 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:34 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:34 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:34 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:34 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:34 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    9.9999999999999950E-003
+  CPU time for the reordering section:    9.9999999999999950E-003
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.03
+ TOTAL                   0.05    5.0         0.07
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      6.107306961E-02  7.360757486E-02  1.028667917E-02  2.366139885E-03  3.180226542E-04
+            2      4.916317502E-03  1.858176721E-02  5.328431184E-03  1.307413881E-04  8.533085711E-05
+            3      7.910549237E-04  8.501934695E-03  3.415009356E-04  3.441637576E-05  3.505027687E-07
+            4      3.633551720E-05  2.134925507E-03  3.138742812E-04  1.300859022E-06  2.960876316E-07
+            5      2.720549793E-06  6.708496066E-04  4.051859377E-05  1.146340004E-07  4.934213330E-09
+            6      1.837104254E-07  1.807945127E-04  6.213448569E-06  7.958045677E-09  1.160309183E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:34 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:34 2024 ---
+ Skipping Nuclear Charge Contribution
+ IFG                  184               216384
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -2.27651231432706E-02    6.67544112788165E-03   -4.90415081381872E-02
+  C2                5.50747309756309E-02    1.80516133750597E-02    1.13419262505230E-02
+  H3               -1.44531575620951E-02    8.52468968815431E-03    3.33062191774465E-03
+  H4                1.02287581791289E-02   -4.64668543913546E-03    5.60821901378122E-03
+  H5               -1.43646539815725E-02   -3.32119034519369E-02    3.41757641580958E-02
+  H6               -1.37205544678224E-02    4.60684469997720E-03   -5.41502320195702E-03
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  1.692700E-06
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -1.34490032384404E+04    3.94366543865750E+03   -2.89723625748734E+04
+  C2                3.25366232629601E+04    1.06643924222310E+04    6.70049539874887E+03
+  H3               -8.53852455069038E+03    5.03615018909206E+03    1.96763903607564E+03
+  H4                6.04286658194481E+03   -2.74513285632806E+03    3.31318021886133E+03
+  H5               -8.48623909044614E+03   -1.96206712464853E+04    2.01900934137609E+04
+  H6               -8.10572296532851E+03    2.72159605283312E+03   -3.19904549257302E+03
+ ------------------------------------------------------------------------------------------
+
+               norm:   57950.1880
+--- Stop Module: alaska at Tue Jul 16 14:02:34 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:34 2024 ---
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.00000169 hartree,         0.00444418 kJ/mol
+           Average energy    =       -77.85585498 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.000002  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+  2    -77.85089017  0.01324736 0.022360  0.011295 nrc006   0.078714  nrc009      -77.85328970 RVO  3  None      0    
+  3    -77.85355618 -0.00266601 0.012557  0.009445 nrc010  -0.113471  nrc012      -77.85529103 RVO  5  None      0    
+  4    -77.85544709 -0.00189091 0.009025  0.005363 nrc010   0.049387  nrc009      -77.85584737 RVO  3  None      0    
+  5    -77.85585274 -0.00040564 0.002111  0.001191 nrc007  -0.009624  nrc011      -77.85585369 RVO  2  None      0    
+  6    -77.85585498 -0.00000225 0.000479  0.000280 nrc004   0.004471  nrc011      -77.85585543 RVO  2  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 1.2074E-03  1.2000E-03     No    + 1.3825E-04  3.0000E-04     Yes   +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 1.7990E-03  1.8000E-03     Yes   + 2.7998E-04  4.5000E-04     Yes   +
+ +-----+----------------------------------+----------------------------------+
+
+ Convergence not reached yet!
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the new structure
+********************************************************************************
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.059666        0.054971       -1.139516
+  C2              -0.461847        0.059217        1.459469
+  H3               1.198400        1.352570       -2.163080
+  H4              -0.761038       -1.477882       -2.332644
+  H5               1.740864       -0.207027        1.374548
+  H6              -0.465769        1.835864        2.517072
+
+
+ *********************************************************
+ * Nuclear coordinates for the next iteration / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.031574        0.029089       -0.603006
+  C2              -0.244399        0.031337        0.772318
+  H3               0.634166        0.715749       -1.144652
+  H4              -0.402724       -0.782061       -1.234382
+  H5               0.921226       -0.109554        0.727380
+  H6              -0.246474        0.971497        1.331977
+
+--
+--- Stop Module: slapaf at Tue Jul 16 14:02:34 2024 /rc=_RC_CONTINUE_LOOP_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: seward at Tue Jul 16 14:02:34 2024 ---
+--- Stop Module: seward at Tue Jul 16 14:02:35 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> IF (ITER == 1)
+(Skipped)
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: rasscf at Tue Jul 16 14:02:35 2024 ---
+--- Stop Module: rasscf at Tue Jul 16 14:02:35 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.rasscf.molden 09_ethylene_scf.rasscf.molden.1 09_ethylene_scf.rasscf.molden.2 09_ethylene_scf.RasOrb 09_ethylene_scf.RasOrb.2 09_ethylene_scf.RasOrb.1
+           09_ethylene_scf.SpdOrb.2 09_ethylene_scf.SpdOrb.1 xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:35 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:35 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:35 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:36 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:36 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    9.9999999999999950E-003
+  CPU time for the reordering section:    9.9999999999999950E-003
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.06    6.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.347200305E-01  5.834664699E-02  2.135481786E-02  1.271192914E-03  1.370154174E-03
+            2      1.229975096E-02  2.363026697E-02  4.835864360E-03  1.708884718E-04  7.026283494E-05
+            3      2.052422154E-03  1.005800179E-02  6.172004851E-04  3.909564937E-05  1.144538069E-06
+            4      5.940262320E-05  2.001201158E-03  1.630581192E-04  1.084774748E-06  7.988462186E-08
+            5      3.121900166E-06  4.806727889E-04  2.168814448E-05  5.979531753E-08  1.413263578E-09
+--- Stop Module: mclr at Tue Jul 16 14:02:36 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:36 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:36 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:36 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:36 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:36 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:36 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:36 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.02
+ Generation              0.02    2.0         0.02
+ TOTAL                   0.05    5.0         0.05
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+ Warning  perturbation number                     1  might diverge
+            1      1.347200305E-01  5.834664699E-02  2.135481786E-02  1.271192914E-03  1.370154174E-03
+            2      1.229975096E-02  2.363026697E-02  4.835864360E-03  1.708884718E-04  7.026283494E-05
+            3      2.052422154E-03  1.005800179E-02  6.172004851E-04  3.909564937E-05  1.144538069E-06
+            4      5.940262320E-05  2.001201158E-03  1.630581192E-04  1.084774748E-06  7.988462186E-08
+            5      3.121900166E-06  4.806727889E-04  2.168814448E-05  5.979531753E-08  1.413263578E-09
+--- Stop Module: mclr at Tue Jul 16 14:02:36 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:36 2024 ---
+ IFG                  184               216384
+--- Stop Module: alaska at Tue Jul 16 14:02:37 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:37 2024 ---
+--- Stop Module: slapaf at Tue Jul 16 14:02:37 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:37 2024 ---
+--- Stop Module: alaska at Tue Jul 16 14:02:37 2024 /rc=_RC_INVOKED_OTHER_MODULE_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: mclr at Tue Jul 16 14:02:37 2024 ---
+
+  Reordering of the Cholesky vectors to full storage. 
+  Elapsed time for the reordering section:    0.0000000000000000     
+  CPU time for the reordering section:    0.0000000000000000     
+
+ TIMING INFORMATION:   CPU(s)   %CPU   Elapsed(s)
+ Transformation          0.02    2.0         0.03
+ Generation              0.03    3.0         0.02
+ TOTAL                   0.06    6.0         0.06
+
+        Iteration       Delta           Res(kappa)       Res(CI)          DeltaK           DeltaC
+            1      4.398948461E-02  7.519677185E-02  4.039412213E-03  2.479867882E-03  4.902457901E-05
+            2      2.300406536E-03  1.717780586E-02  3.031564172E-03  1.046341922E-04  2.761288456E-05
+            3      3.400180933E-04  7.043754655E-03  1.411258833E-04  1.948731338E-05  5.983977523E-08
+            4      2.401706092E-05  1.900944067E-03  3.045248601E-04  1.102080091E-06  2.786263397E-07
+            5      2.041069573E-06  6.436636088E-04  6.324158622E-05  1.053215550E-07  1.201661118E-08
+            6      1.520316322E-07  1.888403821E-04  8.163501842E-06  8.539849784E-09  2.002309849E-10
+--- Stop Module: mclr at Tue Jul 16 14:02:37 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: alaska at Tue Jul 16 14:02:37 2024 ---
+ Skipping Nuclear Charge Contribution
+ IFG                  184               216384
+
+ *****************************************************
+ *                                                   *
+ *              CI derivative coupling               *
+ *                                                   *
+ *****************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -3.11399047737077E-02   -2.70696135430477E-03   -6.05172255422988E-02
+  C2                6.66879846213287E-02    2.18968224250797E-02    9.02168172693196E-03
+  H3               -6.09801107590165E-03    1.61357469756149E-03    7.78358375206431E-03
+  H4                2.89484999985946E-03    8.32924883713768E-04    3.27493288747299E-03
+  H5               -1.32870678019696E-02   -1.99201542762344E-02    3.87785234293796E-02
+  H6               -1.90578509696088E-02   -1.71620637581531E-03    1.65850374644846E-03
+ ------------------------------------------------------------------------------------------
+
+               Energy difference:  1.615128E-06
+
+ *******************************************************
+ *                                                     *
+ *              Total derivative coupling              *
+ *                                                     *
+ *******************************************************
+
+  Irreducible representation: a  
+ ------------------------------------------------------------------------------------------
+                              X                       Y                       Z
+ ------------------------------------------------------------------------------------------
+  C1               -1.92801417848799E+04   -1.67600379951234E+03   -3.74689870557414E+04
+  C2                4.12895867277252E+04    1.35573260118100E+04    5.58573650424809E+03
+  H3               -3.77555805014599E+03    9.99038024539732E+02    4.81917332197478E+03
+  H4                1.79233426848416E+03    5.15701957692402E+02    2.02766099849340E+03
+  H5               -8.22663245083471E+03   -1.23334801956991E+04    2.40095605738009E+04
+  H6               -1.17995887103485E+04   -1.06258199883038E+03    1.02685565722344E+03
+ ------------------------------------------------------------------------------------------
+
+               norm:   68425.2990
+--- Stop Module: alaska at Tue Jul 16 14:02:37 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> EXPORT MOLCAS_TRAP = UNKNOWN_VARIABLE
+
+*** symbolic link created: INPORB -> 09_ethylene_scf.RasOrb
+--- Start Module: slapaf at Tue Jul 16 14:02:37 2024 ---
+
+++ Constraints section
+                                  CONSTRAINTS
+
+********************************************************************************
+A = EDIFF 1 2
+NADC = NAC
+VALUES
+A = 0.00
+NADC = 0.0
+********************************************************************************
+
+
+ *************************************************************
+ * Values of the primitive constraints                       *
+ *************************************************************
+A        : Energy difference =         0.00000162 hartree,         0.00424052 kJ/mol
+           Average energy    =       -77.85585554 hartree
+NADC     : H12               =         0.00000000 hartree 
+
+
+ *******************************************
+ * Values of the constraints   / au or rad *
+ *******************************************
+   Label        C         C0
+ Cns001      0.000002  0.000000
+ Cns002      0.000000  0.000000
+
+--
+
+
+**********************************************************************************************************************
+*                                    Energy Statistics for Geometry Optimization                                     *
+**********************************************************************************************************************
+                       Energy     Grad      Grad              Step                 Estimated   Geom       Hessian     
+Iter      Energy       Change     Norm      Max    Element    Max     Element     Final Energy Update Update   Index  
+  1    -77.86413753  0.00000000 0.027368 -0.016649 nrc008  -0.139600  nrc006      -77.84910412 RVO 11  None      0    
+  2    -77.85089017  0.01324736 0.022360  0.011295 nrc006   0.078714  nrc009      -77.85328970 RVO  3  None      0    
+  3    -77.85355618 -0.00266601 0.012557  0.009445 nrc010  -0.113471  nrc012      -77.85529103 RVO  5  None      0    
+  4    -77.85544709 -0.00189091 0.009025  0.005363 nrc010   0.049387  nrc009      -77.85584737 RVO  3  None      0    
+  5    -77.85585274 -0.00040564 0.002111  0.001191 nrc007  -0.009624  nrc011      -77.85585369 RVO  2  None      0    
+  6    -77.85585498 -0.00000225 0.000479  0.000280 nrc004   0.004471  nrc011      -77.85585543 RVO  2  None      0    
+  7    -77.85585554 -0.00000055 0.000151 -0.000102 nrc001  -0.001289  nrc011      -77.85585550 RVO  1  None      0    
+
+       +----------------------------------+----------------------------------+
+       +    Cartesian Displacements       +    Gradient in internals         +
+       +  Value      Threshold Converged? +  Value      Threshold Converged? +
+ +-----+----------------------------------+----------------------------------+
+ + RMS + 3.6544E-04  1.2000E-03     Yes   + 4.3686E-05  3.0000E-04     Yes   +
+ +-----+----------------------------------+----------------------------------+
+ + Max + 5.0296E-04  1.8000E-03     Yes   + 1.0177E-04  4.5000E-04     Yes   +
+ +-----+----------------------------------+----------------------------------+
+
+ Geometry is converged in   7 iterations to a Minimum Energy Crossing Point Structure
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+++ Conical Intersection Characterization
+   -------------------------------------
+
+ See: J. Chem. Theory Comput. 12 (2016) 3636-3653
+
+     Pitch (delta_gh):                  9.51570E-02 Eh/a0
+     Asymmetry (Delta_gh):              4.48586E-01
+     Relative tilt (sigma=s/delta_gh):  6.88798E-01
+     Tilt heading (theta_s):            3.48999E-01
+
+     P:    3.89835E-01
+     B:    1.24639E+00
+     Type: peaked (P<1) single-path (B>1)
+
+ Local linear representation:
+
+  Local x                                                     
+  mat. size =     6x    3
+        0.3065595796396894      0.0939850814894860      0.5554844180201843
+       -0.6039947071874848     -0.1983807719416626     -0.0505414830824349
+       -0.0197061676479622      0.0426139799024961     -0.0951986782453778
+        0.0354344559427639     -0.0495277658933931     -0.0069263344809273
+        0.0932101374233710      0.0479986980625343     -0.3341117477517812
+        0.1884967018296497      0.0633107783805477     -0.0687061744597516
+
+  Local y                                                     
+  mat. size =     6x    3
+       -0.0832391381811792     -0.3158549311549085      0.0228598441479362
+       -0.0624562739184940     -0.0202290748970003     -0.1513007146920412
+        0.3491621495661825     -0.2638026732226704      0.1059285955277725
+       -0.2852836460861217      0.1916432103729576     -0.1072666497786456
+        0.1367930602494230      0.6255649380320337     -0.1147203573430570
+       -0.0549761516299539     -0.2173214691304696      0.2444992821385018
+
+     Average energy:    -77.85585554 +   0.06159265*x +   0.02241326*y
+     Energy difference:   0.19031398*sqrt(r^2 +   0.44858572*t)
+          r^2 = x^2 + y^2
+          t = x^2 - y^2
+--
+
+++ Geometry section
+
+********************************************************************************
+  Geometrical information of the final structure
+********************************************************************************
+
+  NOTE: on convergence the final predicted structure will be printed here.
+  This is not identical to the structure printed in the head of the output.
+
+ *********************************************************
+ * Nuclear coordinates of the final structure / Bohr     *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.060010        0.055336       -1.139553
+  C2              -0.461863        0.059304        1.459390
+  H3               1.198674        1.352541       -2.162787
+  H4              -0.760963       -1.478082       -2.332303
+  H5               1.740940       -0.207053        1.374171
+  H6              -0.465834        1.835667        2.516932
+
+
+ *********************************************************
+ * Nuclear coordinates of the final structure / Angstrom *
+ *********************************************************
+  ATOM              X               Y               Z     
+  C1              -0.031756        0.029283       -0.603025
+  C2              -0.244407        0.031382        0.772276
+  H3               0.634311        0.715734       -1.144498
+  H4              -0.402684       -0.782167       -1.234202
+  H5               0.921266       -0.109568        0.727180
+  H6              -0.246509        0.971393        1.331903
+
+
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5    
+    1 C1       0.000000
+    2 C2       2.629830        0.000000
+    3 H3       2.077026        4.189274        0.000000
+    4 H4       2.065275        4.102433        3.446932        0.000000
+    5 H5       3.103397        2.220484        3.903391        4.648976        0.000000
+    6 H6       4.087071        2.067336        4.990367        5.880741        3.216902
+
+               6 H6    
+    6 H6       0.000000
+
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5    
+    1 C1       0.000000
+    2 C2       1.391646        0.000000
+    3 H3       1.099115        2.216868        0.000000
+    4 H4       1.092896        2.170914        1.824038        0.000000
+    5 H5       1.642247        1.175029        2.065586        2.460132        0.000000
+    6 H6       2.162785        1.093987        2.640789        3.111954        1.702311
+
+               6 H6    
+    6 H6       0.000000
+
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 C2       1 C1       3 H3       125.35
+                      2 C2       1 C1       4 H4       121.33
+                      3 H3       1 C1       4 H4       112.64
+                      1 C1       2 C2       5 H5        79.06
+                      1 C1       2 C2       6 H6       120.47
+                      5 H5       2 C2       6 H6        97.16
+
+           ***************************************************************
+           *              Valence Dihedral Angles / Degree               *
+           ***************************************************************
+                    Atom centers                       Phi1     Phi2     Theta 
+           3 H3       1 C1       2 C2       5 H5        125.35    79.06   -57.06
+           3 H3       1 C1       2 C2       6 H6        125.35   120.47    34.86
+           4 H4       1 C1       2 C2       5 H5        121.33    79.06   112.73
+           4 H4       1 C1       2 C2       6 H6        121.33   120.47  -155.34
+--
+--- Stop Module: slapaf at Tue Jul 16 14:02:38 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: 09_ethylene_scf.geo.molden 09_ethylene_scf.structure 09_ethylene_scf.Opt.xyz xmldump
+    saved to directory /home/kenya/molcas_test/0716
+
+>>> END DO
+
+.##################.
+.# Happy landing! #.
+.##################.
+
+    Timing: Wall=23.37 User=19.73 System=2.59

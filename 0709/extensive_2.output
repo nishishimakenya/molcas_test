@@ -1,0 +1,312 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: 24.02
+                   OPENMOLCASO
+                       OPE                tag: 428-g03afa2e9a
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py2.28                       *
+           *   build c4a6d18ded8cb6cad61d2372a9abd97c      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: DESKTOP-ET1S6F4 (Linux)
+C Compiler ID: GNU
+C flags: -std=gnu99 -fopenmp
+Fortran Compiler ID: GNU
+Fortran flags: -fno-aggressive-loop-optimizations -cpp -fdefault-integer-8 -fopenmp
+Definitions: _WARNING_WORKAROUND_;_MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   ----------------------------------------------------------------------
+  |
+  |           Project: extensive_2
+  |    Submitted from: /home/kenya/molcas_test/0709
+  |      Scratch area: /tmp/extensive_2
+  |   Save outputs to: /home/kenya/molcas_test/0709
+  |            Molcas: /home/kenya/OpenMolcas/builds/gnu_dev_omp
+  |
+  | Scratch area is NOT empty
+  |
+  |    MOLCAS_DRIVER = /home/kenya/OpenMolcas/builds/gnu_dev_omp/pymolcas
+  |    MOLCAS_NPROCS = 1
+  |    MOLCAS_SOURCE = /home/kenya/OpenMolcas
+  | MOLCAS_STRUCTURE = 0
+  |
+   ----------------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&GATEWAY
+coord = 6
+        Energy:       0.1603398
+C         -0.87290        1.58052       -0.00000
+C         -0.54808        1.44275       -0.00000
+H         -2.51164        0.75429        0.00000
+H         -2.32797        2.52050       -0.00000
+H         -0.09301        0.50277        0.00000
+H          0.09066        2.26898       -0.00000
+
+  Basis = cc-pVDZ
+  Group
+  full
+  NoCD
+
+&SEWARD
+
+&SCF
+
+&RASSCF
+  INACTIVE = 7 0
+  NACTEL = 2 0 0
+  RAS2   = 0 2
+
+-- ----------------------------------
+
+*** symbolic link created: INPORB -> extensive_2.RasOrb
+--- Start Module: gateway at Tue Jul 16 13:35:01 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &GATEWAY
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 192164
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+      Found SYMMETRY generators: z
+
+++    Symmetry information:
+      ---------------------
+
+                    --- Group Generators ---
+                    Reflection in the xy-plane  
+
+                    Character Table for Cs 
+
+                             E   s(xy)
+                    a'       1     1  x, y, xy, Rz
+                    a"       1    -1  z, xz, Ry, yz, Rx, I
+--
+
+
+++    Basis set information:
+      ----------------------
+
+
+      Basis set label: C.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   6.000000 au
+      Associated Actual Charge      6.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       9       3        X                  
+         p       4       2        X                  
+         d       1       1                 X         
+
+
+      Basis set label: H.CC-PVDZ.........
+
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   1.000000 au
+      Associated Actual Charge      1.000000 au
+      Nuclear Model: Point charge
+
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       4       2        X                  
+         p       1       1        X                  
+--
+
+
+++    Molecular structure info:
+      -------------------------
+
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+
+     Center  Label                x              y              z                     x              y              z
+        1      C1              -1.649542       2.986750       0.000000             -0.872900       1.580520       0.000000
+        2      C2              -1.035721       2.726402       0.000000             -0.548080       1.442750       0.000000
+        3      H3              -4.746312       1.425402       0.000000             -2.511640       0.754290       0.000000
+        4      H4              -4.399226       4.763055       0.000000             -2.327970       2.520500       0.000000
+        5      H5              -0.175763       0.950098       0.000000             -0.093010       0.502770       0.000000
+        6      H6               0.171323       4.287751       0.000000              0.090660       2.268980       0.000000
+
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5            6 H6    
+    1 C1       0.000000
+    2 C2       0.666751        0.000000
+    3 H3       3.468111        3.932059        0.000000
+    4 H4       3.273533        3.932063        3.355652        0.000000
+    5 H5       2.513956        1.973521        4.595196        5.690015        0.000000
+    6 H6       2.237890        1.973515        5.690006        4.595196        3.355652        0.000000
+
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+
+               1 C1            2 C2            3 H3            4 H4            5 H5            6 H6    
+    1 C1       0.000000
+    2 C2       0.352829        0.000000
+    3 H3       1.835245        2.080756        0.000000
+    4 H4       1.732279        2.080758        1.775734        0.000000
+    5 H5       1.330328        1.044342        2.431673        3.011026        0.000000
+    6 H6       1.184240        1.044339        3.011022        2.431673        1.775734        0.000000
+
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 C2       1 C1       5 H5        31.13
+                      2 C2       1 C1       6 H6        58.53
+                      5 H5       1 C1       6 H6        89.66
+                      1 C1       2 C2       5 H5       138.82
+                      1 C1       2 C2       6 H6       104.72
+                      5 H5       2 C2       6 H6       116.46
+                      1 C1       5 H5       2 C2        10.06
+                      1 C1       6 H6       2 C2        16.75
+
+           ***************************************************************
+           *              Valence Dihedral Angles / Degree               *
+           ***************************************************************
+                    Atom centers                       Phi1     Phi2     Theta 
+           5 H5       1 C1       2 C2       6 H6         31.13   104.72  -180.00
+           5 H5       2 C2       1 C1       6 H6        138.82    58.53  -180.00
+           2 C2       5 H5       1 C1       6 H6         10.06    89.66    -0.00
+           1 C1       5 H5       2 C2       6 H6         10.06   116.46  -180.00
+           2 C2       6 H6       1 C1       5 H5         16.75    89.66    -0.00
+           1 C1       6 H6       2 C2       5 H5         16.75   116.46  -180.00
+--
+
+
+            Nuclear Potential Energy             73.13896077 au
+
+--- Stop Module: gateway at Tue Jul 16 13:35:01 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0709
+
+*** symbolic link created: INPORB -> extensive_2.RasOrb
+--- Start Module: seward at Tue Jul 16 13:35:01 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SEWARD
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 192168
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Velocity integrals
+                  Orbital angular momentum around (-1.4785  2.8566  0.0000 )
+                  Velocity quadrupole around (-1.4785  2.8566  0.0000 )
+                  Two-Electron Repulsion integrals
+
+                   Integrals are discarded if absolute value <: 1.00E-14
+                   Integral cutoff threshold is set to       <: 1.00E-16
+
+                    Unitary symmetry adaptation
+
+
+            Nuclear Potential Energy             73.13896077 au
+
+
+      Basis set specifications :
+      Symmetry species         a'   a" 
+      Basis functions           36   12
+
+
+      Input file to MOLDEN was generated!
+
+--- Stop Module: seward at Tue Jul 16 13:35:02 2024 /rc=_RC_ALL_IS_WELL_ ---
+*** files: extensive_2.GssOrb extensive_2.guessorb.molden xmldump
+    saved to directory /home/kenya/molcas_test/0709
+
+*** symbolic link created: INPORB -> extensive_2.UhfOrb
+--- Start Module: scf at Tue Jul 16 13:35:02 2024 ---
+
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                                &SCF
+
+                                   only a single process is used
+                       available to each process: 2.0 GB of memory, 1 thread
+                                            pid: 192173
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    Location: rdVec_                                                     ###
+ ###    File: INPORB                                                         ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    IUHF does not match                                                  ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+--- Stop Module: scf at Tue Jul 16 13:35:02 2024 /rc=-6 ---
+*** files: xmldump
+    saved to directory /home/kenya/molcas_test/0709
+
+.########################.
+.# Non-zero return code #.
+.########################.
+
+    Timing: Wall=0.81 User=0.65 System=0.14
